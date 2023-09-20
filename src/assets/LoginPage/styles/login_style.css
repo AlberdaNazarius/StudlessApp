@@ -1,0 +1,122 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+  justify-content: center; 
+  align-items: center; 
+  min-height: 88vh; 
+  background-color: #e9ebef;
+}
+.login-form-section{
+    margin-top: -60px;
+    width: 300px;
+}
+.form-google-button{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    border: 0.5px solid #9f9f9f; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+.form-google-button:hover {
+    background-color: rgb(218, 218, 218);
+}
+.form-google-button:active {
+    background-color:  rgb(197, 197, 197);
+}
+.button-text{
+    margin-left: 10px;
+    font-size: 14px;
+}
+.login-form-conteiner{ 
+    width: 236px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 6px 50px rgba(217,229,255,255);
+    padding: 33px;
+}
+.form-field-section{
+    margin-bottom: 13px;
+    display: flex;
+    flex: 1;
+    margin-top: 5px;
+   
+}
+
+.form-field{
+    height: 30px;
+    width: 97%;
+    font-size: 14px;
+    color: #3B5983;
+    border: 2px solid #ffffff;
+    padding-left: 3%;
+    border-radius: 8px;
+    border: 1.5px solid gray;
+    color: rgb(59, 59, 59);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.15s ease;
+}
+.form-field-name{
+    color:#102441;
+    font-weight: 550;
+    font-size: 15px;
+    display: block;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.form-field:focus{
+    box-shadow: 0 0 10px rgba(44, 120, 207, 0.658);
+    border: 1.5px solid rgb(58, 136, 224);
+    outline: none;
+}
+
+.form-field-name, .forgot-ref {
+    display: inline-block; 
+}
+.forgot-ref{
+    text-decoration: none;
+    float: right;
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 549;
+    color:rgb(74, 133, 200)
+}
+.form-login-button{
+    height: 40px;
+    border: none;
+    width: 100%;
+    background-color:rgb(10, 149, 255);
+    color:#ffffff;
+    padding: 9px;
+    border-radius: 8px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.form-login-button:hover {
+    background-color: rgb(13, 124, 209);
+}
+
+.form-login-button:active {
+    background-color:  rgb(15, 92, 180);
+}
+.login-logo-section{
+    margin-left: 140px;
+    margin-bottom: 25px;
+}
+.default-text{
+    margin-top: 30px;
+    margin-left: 25%;
+    font-size: 13px;
+}
+.singin-ref{
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 549;
+    color:rgb(74, 133, 200)
+}
+.default-text, .singin-ref{
+    display: inline-block;
+}
