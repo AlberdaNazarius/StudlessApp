@@ -1,0 +1,91 @@
+.auth-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.panel {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color:#ffffff;
+    border-radius: 8px;
+    width: fit-content;
+    padding: 1.25vw;
+    overflow: auto;
+}
+.panel * {
+    width: 100%;
+}
+.panel > * {
+    margin-bottom: 15px;
+}
+.panel > *:last-child {
+    margin-bottom: 0;
+}
+
+input {
+    border-radius: 6px;
+    height: 30px;
+    border: 1.5px solid gray;
+    color: rgb(59, 59, 59);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.15s ease;
+    box-sizing: border-box;
+    padding-left: 5px;
+}
+input:focus {
+    box-shadow: 0 0 10px rgba(44, 120, 207, 0.658);
+    border: 1.5px solid rgb(58, 136, 224);
+    outline: none;
+}
+
+p.input-heading {
+    margin: 0;
+    margin-bottom: 5px;
+    font-family: 'Noto Sans';
+    font-size: 14px;
+    font-weight: bold;
+}
+
+button.alt-sign-up-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 9px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dcddde;
+    border-radius: 8px;
+}
+button.alt-sign-up-btn:hover {
+    background-color: #f8f9f9;
+}
+button.alt-sign-up-btn:active {
+    background-color: #f1f2f3;
+    border-width: 5px;
+}
+button.alt-sign-up-btn > * {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 5px;
+}
+button.alt-sign-up-btn > *:last-child {
+    margin-right: 0;
+}
+
+img.sign-up-icon {
+    width: 16px;
+}
+
+.alt-sign-up-btn-section {
+    margin: 20px 0;
+}
+.alt-sign-up-btn-section > * {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.alt-sign-up-btn-section > *:last-child {
+    margin-bottom: 0;
+}
