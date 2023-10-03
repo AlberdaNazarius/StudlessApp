@@ -1,0 +1,113 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    height: 50px;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+
+    background-color: white;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(221, 221, 221);
+}
+
+button {
+    transition: background-color 0.15s;
+}
+
+.logo-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.logo {
+    width: 45px;
+}
+
+.logo-text {
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.search-bar-section {
+    display: flex;
+    flex: 1;
+    margin-left: 20px;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.search-bar {
+    max-width: 800px;
+    width: 100%;
+    border-radius: 8px;
+    margin-left: auto;
+    height: 25px;
+    border: 1.5px solid gray;
+    padding-left: 10px;
+    color: rgb(59, 59, 59);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.15s ease;
+}
+
+.search-bar:focus {
+    box-shadow: 0 0 10px rgba(44, 120, 207, 0.658);
+    border: 1.5px solid rgb(58, 136, 224);
+    outline: none;
+}
+
+.register-section {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    width: 200px;    
+}
+
+.login-button {
+    border: none;
+    background-color: rgb(208, 235, 255);
+    padding: 9px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.login-button:hover {
+    background-color: rgb(186, 209, 228);
+}
+
+.login-button:active {
+    background-color: rgb(153, 183, 207);
+}
+
+.sign-up-button {
+    border: none;
+    background-color: rgb(10, 149, 255);
+    color: white;
+    padding: 9px;
+    border-radius: 8px;
+}
+
+.sign-up-button:hover {
+    background-color: rgb(13, 124, 209);
+}
+
+.sign-up-button:active {
+    background-color: rgb(15, 92, 180);
+}
+
+.home-button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+
+.home-button:hover {
+    background-color: rgb(226, 225, 225);
+}
