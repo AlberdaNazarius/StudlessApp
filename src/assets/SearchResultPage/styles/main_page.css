@@ -27,11 +27,11 @@ a:visited {
     flex-direction: row;
 }
 
-@media (width > 980px) {
+/* @media (width > 980px) {
     .sidebar-section {
         flex: 0.5;
     }
-}
+} */
 
 .sidebar-section {
     color: rgb(48, 47, 47);
@@ -77,7 +77,7 @@ a:visited {
 }
 
 .middle-main-section {
-    flex: 2;
+    /* flex: 2; */
     max-width: 750px;
 }
 
@@ -241,7 +241,7 @@ a:visited {
 }
 
 .right-main-section {
-    flex: 0.7;
+    /* flex: 0.7; */
     margin-left: 30px;
     padding-top: 30px;
 }

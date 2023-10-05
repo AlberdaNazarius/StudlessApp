@@ -18,8 +18,13 @@ header {
 .logo-section {
     flex: 1;
     display: flex;
+    margin-left: 42px;
     align-items: center;
-    justify-content: right;
+}
+
+.logo-section > p {
+    margin: 20px;
+    color: red;
 }
 
 .logo {
@@ -33,7 +38,7 @@ header {
 
 .search-bar-section {
     display: flex;
-    flex: 1;
+    flex: 2;
     margin-left: 20px;
     margin-right: 10px;
     align-items: center;
@@ -62,7 +67,10 @@ header {
     display: flex;
     flex: 1;
     align-items: center;
-    width: 200px;    
+    width: 130px;    
+    margin-left: auto;
+    margin-right: 75px;
+    justify-content: right;
 }
 
 .login-button {
