@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Studless</title>
+        <link rel="stylesheet" href="styles/general.css">
+        <link rel="stylesheet" href="styles/header_style.css">
+        <link rel="stylesheet" href="styles/home_page.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo-section">
+                <button class="home-button">
+                    <img class="logo" src="images/logo.png">
+                    <h3 class="logo-text">Studless</h3>
+                </button>
+                <div class="logo-home-question-buttons">
+                    <button class="logo-home-button">
+                        <h3 class="logo-home-text">Home</h3>
+                    </button>
+                    <button class="logo-question-button">
+                        <h3 class="logo-question-text">Question</h3>
+                    </button>
+                </div>
+            </div>
+            <div class="search-bar-section">
+                <input class="search-bar" type="text" placeholder="Search...">
+            </div>
+            <div class="register-section">
+                <button class="logo-search-button">
+                    <svg aria-hidden="true" class="svg-icon iconSearch" width="18" height="18" viewBox="0 0 18 18">
+                        <path d="m18 16.5-5.14-5.18h-.35a7 7 0 1 0-1.19 1.19v.35L16.5 18l1.5-1.5ZM12 7A5 5 0 1 1 2 7a5 5 0 0 1 10 0Z"></path>
+                    </svg>
+                </button>
+                <button class="login-button">Log in</button>
+                <button class="sign-up-button">Sign up</button>
+            </div>
+        </header>
+        <div class="main-content">
+            <div style="flex: 5;">
+                <h4>Topics</h4>
+                <div class="topics-section">
+                    <div class="topic-panel">
+                        <div class="topic-top-panel" style="background-color: #1598A3;">
+                            <h4 class="topic-heading">Databases</h4>
+                            <p class="topic-description">Efficient data storage and manipulation using
+                                queries in database management systems.</p>
+                            <div class="topic-last-question question">
+                                <img class="question-avatar" src="images/avatar.jpg">
+                                <div class="question-right-part">
+                                    <p class="question-heading">Difference between SQL and NoSQL databases</p>
+                                    <div class="question-metadata">
+                                        <p>15 minutes ago</p>
+                                        <p>·</p>
+                                        <a href="#">LnuStudent1</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="topic-fotter-bar">
+                            <div class="topic-link">
+                                <p class="topic-link-icon">🡪</p>
+                                <p class="topic-link-text">More</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="topic-panel">
+                        <div class="topic-top-panel" style="background-color: #E99330;">
+                            <h4 class="topic-heading">Data Engineering</h4>
+                            <p class="topic-description">Collect, store, process, and manage data efficiently.</p>
+                            <div class="topic-last-question question">
+                                <img class="question-avatar" src="images/avatar.jpg">
+                                <div class="question-right-part">
+                                    <p class="question-heading">How to purify data</p>
+                                    <div class="question-metadata">
+                                        <p>2 hours ago</p>
+                                        <p>·</p>
+                                        <a href="#">LnuStudent2</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="topic-fotter-bar">
+                            <div class="topic-link">
+                                <p class="topic-link-icon">🡪</p>
+                                <p class="topic-link-text">More</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="topic-panel">
+                        <div class="topic-top-panel" style="background-color: #4AB551;">
+                            <h4 class="topic-heading">Cloud Computing</h4>
+                            <p class="topic-description">Cloud infrastructure development, deployment models and management tools.</p>
+                            <div class="topic-last-question question">
+                                <img class="question-avatar" src="images/avatar.jpg">
+                                <div class="question-right-part">
+                                    <p class="question-heading">How to set up EC2 instance with alarm on expire</p>
+                                    <div class="question-metadata">
+                                        <p>30 minutes ago</p>
+                                        <p>·</p>
+                                        <a href="#">LnuStudent3</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="topic-fotter-bar">
+                            <div class="topic-link">
+                                <p class="topic-link-icon">🡪</p>
+                                <p class="topic-link-text">More</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="side-bar" style="flex: 2;">
+                <h4>Latest questions</h4>
+                <hr>
+                <div class="last-questions-list">
+                    <div class="question">
+                        <img class="question-avatar" src="images/avatar.jpg">
+                        <div class="question-right-part">
+                            <p class="question-heading">Difference between SQL and NoSQL databases</p>
+                            <div class="question-metadata">
+                                <p>15 minutes ago</p>
+                                <p>·</p>
+                                <a href="#">LnuStudent1</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <img class="question-avatar" src="images/avatar.jpg">
+                        <div class="question-right-part">
+                            <p class="question-heading">How to set up EC2 instance with alarm on expire</p>
+                            <div class="question-metadata">
+                                <p>30 minutes ago</p>
+                                <p>·</p>
+                                <a href="#">LnuStudent3</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <img class="question-avatar" src="images/avatar.jpg">
+                        <div class="question-right-part">
+                            <p class="question-heading">How to purify data</p>
+                            <div class="question-metadata">
+                                <p>2 hours ago</p>
+                                <p>·</p>
+                                <a href="#">LnuStudent2</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h4>Forum statistics</h4>
+                <hr>
+                <div class="forum-statistics">
+                    <div class="statistic">
+                        <p class="remove-padding">Questions:</p>
+                        <p class="statistic-value">123,123</p>
+                    </div>
+                    <div class="statistic">
+                        <p>Messages:</p>
+                        <p class="statistic-value">123,123,123</p>
+                    </div>
+                    <div class="statistic">
+                        <p>Members:</p>
+                        <p class="statistic-value">123</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
