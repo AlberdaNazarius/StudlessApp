@@ -8,16 +8,20 @@ hr {
 
 .main-content {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1230px;
     margin-top: 15px;
     display: flex;
     font-family: sans-serif;
+}
+.main-content > *:first-child {
+    padding-left: 15px;
 }
 .main-content > * {
     margin-right: 50px;
 }
 .main-content > *:last-child {
     margin-right: 0;
+    padding-right: 15px;
 }
 
 .topics-section {
@@ -27,14 +31,14 @@ hr {
 }
 
 .topic-panel {
-    height: 240px;
+    min-height: 240px;
     display: flex;
     flex-direction: column;
 }
 
 .topic-top-panel {
     background-color: grey;
-    height: 120px;
+    min-height: 120px;
     width: 230;
     display: flex;
     flex: 1;
@@ -52,12 +56,12 @@ hr {
 }
 
 .topic-heading {
-    margin: 20px 20px 0 25px;;
+    margin: 20px 20px 0 25px;
     font-weight: 800;
 }
 
 .topic-description {
-    margin: 10px 20px 0 35px;
+    margin: 10px 20px 10px 35px;
 }
 
 .topic-last-question {
@@ -153,8 +157,22 @@ hr {
     margin-left: auto;
 }
 
-@media (max-width: 570px) {
+@media (max-width: 620px) {
     .topics-section{
         grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 920px) {
+    .main-content {
+        flex-direction: column;
+    }
+    .main-content > * {
+        margin-right: 0;
+        margin-bottom: 30px;
+        padding: 0 15px;
+    }
+    .main-content > *:last-child {
+        margin-bottom: 0;
     }
 }
