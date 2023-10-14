@@ -1,0 +1,188 @@
+header {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    height: 50px;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+
+    background-color: white;
+    border-bottom-width: 1.5px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(221, 221, 221);
+
+    position: fixed;
+    z-index: 999;
+}
+
+.logo-section {
+    flex: 1;
+    display: flex;
+    margin-left: 42px;
+    align-items: center;
+}
+
+.logo {
+    width: 45px;
+}
+
+.logo-text {
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.logo-home-question-buttons {
+    display: flex;
+}
+
+.logo-home-question-buttons > h3 {
+    font-weight: 400;
+    color: #70767c
+}
+
+.logo-home-button:hover {
+    color: rgb(0, 0, 0);
+}
+
+.logo-question-button:hover {
+    color: rgb(0, 0, 0);
+}
+
+.logo-home-question-buttons > button {
+    margin-left: 20px;
+    background-color: transparent;
+    border: none;
+    color: rgb(82, 89, 96);
+}
+
+.search-bar-section {
+    display: flex;
+    flex: 2;
+    margin-left: 20px;
+    margin-right: 10px;
+    align-items: center;
+    min-width: 100px;
+}
+
+.search-bar {
+    max-width: 800px;
+    width: 100%;
+    border-radius: 8px;
+    margin-left: auto;
+    height: 25px;
+    border: 1.5px solid gray;
+    padding-left: 10px;
+    color: rgb(59, 59, 59);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.15s ease;
+}
+
+.search-bar:focus {
+    box-shadow: 0 0 10px rgba(44, 120, 207, 0.658);
+    border: 1.5px solid rgb(58, 136, 224);
+    outline: none;
+}
+
+.register-section {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    width: 130px;    
+    margin-left: auto;
+    margin-right: 40px;
+    justify-content: right;
+}
+
+.register-section > button {
+    white-space: nowrap;
+}
+
+.logo-search-button {
+    display: none;
+    background: transparent;
+    border-style: none;
+    margin-right: 10px;
+    height: 100%;
+    padding: 0 10px;
+    border-radius: 8px;
+}
+
+.logo-search-button:hover {
+    background-color: rgb(226, 225, 225);
+}
+
+.logo-search-button:active {
+    border-radius: 0;
+}
+
+.logo-search-button > * {
+    fill: #70767c;
+}
+
+.login-button {
+    border: none;
+    background-color: rgb(208, 235, 255);
+    padding: 9px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.login-button:hover {
+    background-color: rgb(186, 209, 228);
+}
+
+.login-button:active {
+    background-color: rgb(153, 183, 207);
+}
+
+.sign-up-button {
+    border: none;
+    background-color: rgb(10, 149, 255);
+    color: white;
+    padding: 9px;
+    border-radius: 8px;
+}
+
+.sign-up-button:hover {
+    background-color: rgb(13, 124, 209);
+}
+
+.sign-up-button:active {
+    background-color: rgb(15, 92, 180);
+}
+
+.home-button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+
+.home-button:hover {
+    background-color: rgb(226, 225, 225);
+}
+
+@media (max-width: 750px) {
+    .search-bar-section {
+        display: none;
+    }
+    .register-section {
+        margin-left: 55px;
+    }
+    .logo-search-button {
+        display: inline-block;
+    }
+    .logo-home-question-buttons > button {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 570px) {
+    .logo-home-question-buttons > button {
+        margin-left: 5px;
+    }
+}
