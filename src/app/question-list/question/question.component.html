@@ -10,7 +10,7 @@
         {{question.questionName}}
       </a>
     </p>
-    <p class="question-description">{{question.description}}</p>
+    <p class="question-description">{{question.description | slice:0: 170}}...</p>
     <div class="bottom-question-panel">
       <div *ngFor="let tag of question.tags">
         <app-tag [tag]="tag"></app-tag>
