@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  padding-top: 40px;
+  margin-left: 0;
+}
+
+button {
+  transition: background-color 0.15s, color 0.15s;
+}
