@@ -1,0 +1,26 @@
+<div class="question-card justify-content-center">
+  <div class="stats">
+    <p>{{question.votes}} votes</p>
+    <p>{{question.answers}} answers</p>
+    <p>{{question.views}} views</p>
+  </div>
+  <div class="main-question-info">
+    <p class="question">
+      <a class="question-link page-link" href="#">
+        {{question.questionName}}
+      </a>
+    </p>
+    <p class="question-description">{{question.description | slice:0: 170}}...</p>
+    <div class="bottom-question-panel">
+      <div *ngFor="let tag of question.tags">
+        <app-tag [tag]="tag"></app-tag>
+      </div>
+      <div class="user-data">
+        <img class="image-avatar" [src]="author.imagePath" alt="author_image">
+        <a class="avatar-name page-link" href="#">{{author.name}}</a>
+        <h5 class="user-rating">{{author.rating}}</h5>
+        <time class="time">asked {{question.askedDate}} ago</time>
+      </div>
+    </div>
+  </div>
+</div>

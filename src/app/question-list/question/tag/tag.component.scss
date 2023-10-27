@@ -1,0 +1,17 @@
+$tab-btn-color: rgb(225, 236, 244);
+$tag-btn-hover-color: rgb(204, 226, 243);
+$tag-text-color: rgb(57, 115, 157);
+
+.tag {
+  border: none;
+  color: $tag-text-color;
+  background-color: $tab-btn-color;
+  border-radius: 4px;
+  padding: 4.8px 6px;
+  font-size: 12px;
+  margin-right: 5px;
+
+  &:hover {
+    background-color: $tag-btn-hover-color;
+  }
+}
