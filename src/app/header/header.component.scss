@@ -1,60 +1,68 @@
+$color_1: #70767c;
+$color_2: rgb(0, 0, 0);
+$color_3: rgb(82, 89, 96);
+$color_4: rgb(59, 59, 59);
+$white-color: white;
+$transparent-color: transparent;
+$logo-btn-hover: rgb(226, 225, 225);
+$login-button-color: rgb(208, 235, 255);
+$login-button-hover-color: rgb(186, 209, 228);
+$login-button-active-color: rgb(153, 183, 207);
+$sign-up-button-color: rgb(10, 149, 255);
+$sign-up-button-hover-color: rgb(13, 124, 209);
+$sign-up-button-active-color: rgb(15, 92, 180);
+$header-border-bottom-color: rgb(221, 221, 221);
+
 header {
   display: flex;
   flex-direction: row;
   justify-content: center;
-
   height: 50px;
   top: 0;
   left: 0;
   right: 0;
   position: fixed;
-
-  background-color: white;
+  background-color: $white-color;
   border-bottom-width: 1.5px;
   border-bottom-style: solid;
-  border-bottom-color: rgb(221, 221, 221);
+  border-bottom-color: $header-border-bottom-color;
 }
-
 .logo-section {
   flex: 1;
   display: flex;
   margin-left: 42px;
   align-items: center;
 }
-
 .logo {
   width: 45px;
 }
-
 .logo-text {
   display: inline-block;
   margin-left: 4px;
 }
-
 .logo-home-question-buttons {
   display: flex;
+  >h3 {
+    font-weight: 400;
+    color: $color_1;
+  }
+  >button {
+    margin-left: 20px;
+    background-color: $transparent-color;
+    border: none;
+    color: $color_3;
+  }
 }
-
-.logo-home-question-buttons > h3 {
-  font-weight: 400;
-  color: #70767c
+.logo-home-button {
+  &:hover {
+    color: $color_2;
+  }
 }
-
-.logo-home-button:hover {
-  color: rgb(0, 0, 0);
+.logo-question-button {
+  &:hover {
+    color: $color_2;
+  }
 }
-
-.logo-question-button:hover {
-  color: rgb(0, 0, 0);
-}
-
-.logo-home-question-buttons > button {
-  margin-left: 20px;
-  background-color: transparent;
-  border: none;
-  color: rgb(82, 89, 96);
-}
-
 .search-bar-section {
   display: flex;
   flex: 2;
@@ -63,7 +71,6 @@ header {
   align-items: center;
   min-width: 100px;
 }
-
 .search-bar {
   max-width: 800px;
   width: 100%;
@@ -72,17 +79,15 @@ header {
   height: 25px;
   border: 1.5px solid gray;
   padding-left: 10px;
-  color: rgb(59, 59, 59);
+  color: $color_4;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.15s ease;
+  &:focus {
+    box-shadow: 0 0 10px rgba(44, 120, 207, 0.658);
+    border: 1.5px solid rgb(58, 136, 224);
+    outline: none;
+  }
 }
-
-.search-bar:focus {
-  box-shadow: 0 0 10px rgba(44, 120, 207, 0.658);
-  border: 1.5px solid rgb(58, 136, 224);
-  outline: none;
-}
-
 .register-section {
   display: flex;
   flex: 1;
@@ -91,12 +96,10 @@ header {
   margin-left: auto;
   margin-right: 40px;
   justify-content: right;
+  >button {
+    white-space: nowrap;
+  }
 }
-
-.register-section > button {
-  white-space: nowrap;
-}
-
 .logo-search-button {
   display: none;
   background: transparent;
@@ -105,63 +108,51 @@ header {
   height: 100%;
   padding: 0 10px;
   border-radius: 8px;
+  &:hover {
+    background-color: $logo-btn-hover;
+  }
+  &:active {
+    border-radius: 0;
+  }
+  >* {
+    fill: #70767c;
+  }
 }
-
-.logo-search-button:hover {
-  background-color: rgb(226, 225, 225);
-}
-
-.logo-search-button:active {
-  border-radius: 0;
-}
-
-.logo-search-button > * {
-  fill: #70767c;
-}
-
 .login-button {
   border: none;
-  background-color: rgb(208, 235, 255);
+  background-color: $login-button-color;
   padding: 9px;
   border-radius: 8px;
   margin-right: 10px;
+  &:hover {
+    background-color: $login-button-hover-color;
+  }
+  &:active {
+    background-color: $login-button-active-color;
+  }
 }
-
-.login-button:hover {
-  background-color: rgb(186, 209, 228);
-}
-
-.login-button:active {
-  background-color: rgb(153, 183, 207);
-}
-
 .sign-up-button {
   border: none;
-  background-color: rgb(10, 149, 255);
-  color: white;
+  background-color: $sign-up-button-color;
+  color: $white-color;
   padding: 9px;
   border-radius: 8px;
+  &:hover {
+    background-color: $sign-up-button-hover-color;
+  }
+  &:active {
+    background-color: $sign-up-button-active-color;
+  }
 }
-
-.sign-up-button:hover {
-  background-color: rgb(13, 124, 209);
-}
-
-.sign-up-button:active {
-  background-color: rgb(15, 92, 180);
-}
-
 .home-button {
   display: flex;
   align-items: center;
-  background-color: transparent;
+  background-color: $transparent-color;
   border: none;
+  &:hover {
+    background-color: $logo-btn-hover;
+  }
 }
-
-.home-button:hover {
-  background-color: rgb(226, 225, 225);
-}
-
 @media (max-width: 750px) {
   .search-bar-section {
     display: none;
@@ -172,13 +163,16 @@ header {
   .logo-search-button {
     display: inline-block;
   }
-  .logo-home-question-buttons > button {
-    margin-left: 10px;
+  .logo-home-question-buttons {
+    >button {
+      margin-left: 10px;
+    }
   }
 }
-
 @media (max-width: 570px) {
-  .logo-home-question-buttons > button {
-    margin-left: 5px;
+  .logo-home-question-buttons {
+    >button {
+      margin-left: 5px;
+    }
   }
 }
