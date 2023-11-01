@@ -1,0 +1,13 @@
+<div class="topic-panel">
+  <div class="top-panel" [ngStyle]="{background: color}">
+    <h4 class="heading">{{topic.name}}</h4>
+    <p class="description">{{topic.description}}</p>
+    <app-compact-question *ngIf="last_question" [question]="last_question" class="last-question"></app-compact-question>
+  </div>
+  <div class="fotter-bar">
+    <div class="link">
+      <p class="link-icon">🡪</p>
+      <p class="link-text">More</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="main-content">
+  <div style="flex: 5;">
+    <h4>Topics</h4>
+    <div class="topics-section">
+
+      <app-topic-panel
+            *ngFor="let topic of topics"
+            [topic]="topic">
+        </app-topic-panel>
+
+    </div>
+  </div>
+  <div class="side-bar" style="flex: 2;">
+    <h4>Latest questions</h4>
+    <hr>
+    <div class="last-questions-list">
+
+      <app-compact-question
+            *ngFor="let question of last_questions"
+            [question]="question">
+        </app-compact-question>
+
+    </div>
+    <h4>Forum statistics</h4>
+    <hr>
+    <div class="forum-statistics">
+      <div class="statistic">
+        <p class="remove-padding">Questions:</p>
+        <p class="statistic-value">123,123</p>
+      </div>
+      <div class="statistic">
+        <p>Messages:</p>
+        <p class="statistic-value">123,123,123</p>
+      </div>
+      <div class="statistic">
+        <p>Members:</p>
+        <p class="statistic-value">123</p>
+      </div>
+    </div>
+  </div>
+</div>

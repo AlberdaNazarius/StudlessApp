@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {QuestionListComponent} from "./question-list/question-list.component";
+import { QuestionListComponent } from "./question-list/question-list.component";
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {path: "search", component: QuestionListComponent}
+  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: "search", component: QuestionListComponent }
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
-import {User} from "./user.model";
+import { User } from "./user.model";
+import { Topic } from "./topic.model";
 
 export class Question {
   constructor(public id: number,
@@ -9,6 +10,7 @@ export class Question {
               public answers: number,
               public views: number,
               public askedDate: string,
-              public author: User
+              public author: User,
+              public topic: Topic
   ) {}
 }

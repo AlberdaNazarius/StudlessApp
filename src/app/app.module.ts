@@ -8,6 +8,9 @@ import { QuestionListComponent } from './question-list/question-list.component';
 import { QuestionComponent } from './question-list/question/question.component';
 import {QuestionService} from "./shared/services/question.service";
 import { TagComponent } from './question-list/question/tag/tag.component';
+import { HomeComponent } from './home/home.component';
+import { TopicPanelComponent } from './home/topic-panel/topic-panel.component';
+import { CompactQuestionComponent } from './shared/components/compact-question/compact-question.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { TagComponent } from './question-list/question/tag/tag.component';
     HeaderComponent,
     QuestionListComponent,
     QuestionComponent,
-    TagComponent
+    TagComponent,
+    HomeComponent,
+    TopicPanelComponent,
+    CompactQuestionComponent
   ],
   imports: [
     BrowserModule,
