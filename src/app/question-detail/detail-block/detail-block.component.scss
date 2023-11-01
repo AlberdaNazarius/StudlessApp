@@ -1,0 +1,19 @@
+$bnt-hover-color: rgb(252, 227, 181);
+$btn-active-color: rgb(236, 193, 138);
+
+.rate-up-button {
+  &:hover {
+    background-color: $bnt-hover-color;
+  }
+  &:active {
+    background-color: $btn-active-color;
+  }
+}
+.rate-down-button {
+  &:hover {
+    background-color: $bnt-hover-color;
+  }
+  &:active {
+    background-color: $btn-active-color;
+  }
+}
