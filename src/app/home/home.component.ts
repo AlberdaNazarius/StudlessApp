@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
     document.body.style.backgroundColor = '#f1f2f4';
     // Set properties values
     this.topics = this.topicService.getTopics();
+    //TODO change this
     this.last_questions = this.questionService.getQuestions();
   }
 }

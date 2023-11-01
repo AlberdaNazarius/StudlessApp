@@ -11,6 +11,9 @@ import { TagComponent } from './question-list/question/tag/tag.component';
 import { HomeComponent } from './home/home.component';
 import { TopicPanelComponent } from './home/topic-panel/topic-panel.component';
 import { CompactQuestionComponent } from './shared/components/compact-question/compact-question.component';
+import {QuestionDetailComponent} from "./question-detail/question-detail.component";
+import { DetailBlockComponent } from './question-detail/detail-block/detail-block.component';
+import {UserInfoComponent} from "./question-detail/detail-block/user-info/user-info.component";
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { CompactQuestionComponent } from './shared/components/compact-question/c
     TagComponent,
     HomeComponent,
     TopicPanelComponent,
-    CompactQuestionComponent
+    CompactQuestionComponent,
+    QuestionDetailComponent,
+    UserInfoComponent,
+    DetailBlockComponent
   ],
   imports: [
     BrowserModule,
