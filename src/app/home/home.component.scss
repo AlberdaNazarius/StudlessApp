@@ -1,5 +1,3 @@
-$default-font-family: sans-serif;
-
 hr {
 	opacity: 30%;
 }
@@ -9,7 +7,6 @@ hr {
 	max-width: 1230px;
 	margin-top: 15px;
 	display: flex;
-	font-family: $default-font-family;
 
 	>* {
 		&:first-child {
