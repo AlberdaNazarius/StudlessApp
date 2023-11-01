@@ -1,14 +1,7 @@
 body {
-  padding-top: 70px;
   margin-left: 0;
 }
 
 button {
   transition: background-color 0.15s, color 0.15s;
-}
-
-@media (max-width: 991px) {
-  body {
-    padding-top: 210px;
-  }
 }
