@@ -1,40 +1,49 @@
-<div class="main-content">
-  <div style="flex: 5;">
-    <h4>Topics</h4>
-    <div class="topics-section">
-
-      <app-topic-panel
+<div class="container main-container">
+  <div class="row">
+    <div class="col-md-6 col-lg-8">
+      <div class="container-fluid">
+        <h5>Topics</h5>
+        <div class="row gy-3" >
+          <app-topic-panel class="col-xs-12 col-lg-6"
             *ngFor="let topic of topics"
             [topic]="topic">
-        </app-topic-panel>
-
-    </div>
-  </div>
-  <div class="side-bar" style="flex: 2;">
-    <h4>Latest questions</h4>
-    <hr>
-    <div class="last-questions-list">
-
-      <app-compact-question
-            *ngFor="let question of last_questions"
-            [question]="question">
-        </app-compact-question>
-
-    </div>
-    <h4>Forum statistics</h4>
-    <hr>
-    <div class="forum-statistics">
-      <div class="statistic">
-        <p class="remove-padding">Questions:</p>
-        <p class="statistic-value">123,123</p>
+          </app-topic-panel>
+        </div>
       </div>
-      <div class="statistic">
-        <p>Messages:</p>
-        <p class="statistic-value">123,123,123</p>
-      </div>
-      <div class="statistic">
-        <p>Members:</p>
-        <p class="statistic-value">123</p>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="row gy-3">
+        <div class="col-12">
+          <h5>Latest questions</h5>
+          <hr>
+          <div class="container-fluid">
+            <div class="row gy-3">
+              <app-compact-question class="col-12"
+                *ngFor="let question of last_questions"
+                [question]="question">
+              </app-compact-question>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <h5>Forum statistics</h5>
+          <hr>
+          <div class="container-fluid">
+            <div class="row">
+              <p class="col">Questions:</p>
+              <p class="col-auto">123,123</p>
+            </div>
+            <div class="row">
+              <p class="col">Messages:</p>
+              <p class="col-auto">123,123,123</p>
+            </div>
+            <div class="row">
+              <p class="col">Members:</p>
+              <p class="col-auto">123</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

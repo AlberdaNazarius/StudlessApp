@@ -1,7 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Topic } from '../../shared/models/topic.model';
 import { Question } from 'src/app/shared/models/question.model';
-import {QuestionService} from "../../shared/services/question.service";
+import { QuestionService } from "../../shared/services/question.service";
 
 @Component({
   selector: 'app-topic-panel',
@@ -15,7 +15,7 @@ export class TopicPanelComponent implements OnInit {
 
   last_question: Question;
 
-  constructor(private questionService: QuestionService) {}
+  constructor(private questionService: QuestionService) { }
 
   ngOnInit(): void {
     this.color = this.color_variations[Math.floor(Math.random() * this.color_variations.length)]

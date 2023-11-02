@@ -1,24 +1,14 @@
-.compact-question {
-	display: flex;
-    .avatar {
-        height: 36px;
-        width: 36px;
-    }
-    .right-part {
-        margin-left: 10px;
-    }
-    .heading {
-        margin: 0;
-    }
-    .metadata {
-        font-size: 12px;
-        >* {
-            display: inline-block;
-            margin: 0;
-            margin-right: 5px;
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-    }
+.row {
+  .avatar {
+    height: 36px;
+    width: 36px;
+  }
+
+  .right-part {
+    margin-left: 10px;
+  }
+
+  .metadata {
+    font-size: 12px;
+  }
 }

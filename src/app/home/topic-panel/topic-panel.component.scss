@@ -1,65 +1,23 @@
-$text-color: white;
 $top-panel-color: grey;
-$fotter-bar-color: white;
+$footer-bar-color: white;
+$card-border-radius: 8px;
 
 .topic-panel {
-    min-height: 240px;
-    display: flex;
-    flex-direction: column;
+  border-radius: $card-border-radius;
+  min-height: 240px;
 
-    .top-panel {
-        background-color: $top-panel-color;
-        min-height: 120px;
-        width: 230;
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-        border-radius: 8px 8px 0 0;
+  .top-panel {
+    background-color: $top-panel-color;
+    border-radius: $card-border-radius $card-border-radius 0 0;
 
-        h4 {
-            color: $text-color;
-        }
-
-        p {
-            color: $text-color;
-        }
-
-        a {
-            color: $text-color;
-        }
+    #description {
+      margin-left: 1rem;
     }
+  }
 
-    .heading {
-        margin: 20px 20px 0 25px;
-        font-weight: 800;
-    }
-
-    .description {
-        margin: 10px 20px 10px 35px;
-    }
-
-    .last-question {
-        margin: auto 20px 15px 25px;
-    }
-
-    .fotter-bar {
-        background-color: $fotter-bar-color;
-        height: 50px;
-        display: flex;
-        border-radius: 0 0 8px 8px;
-    }
-
-    .link {
-        margin-left: auto;
-        justify-content: center;
-        display: flex;
-    }
-
-    .link-icon {
-        margin-right: 8px;
-    }
-
-    .link-text {
-        margin-right: 18px;
-    }
+  .footer-bar {
+    background-color: $footer-bar-color;
+    border-radius: 0 0 $card-border-radius $card-border-radius;
+    height: 50px;
+  }
 }

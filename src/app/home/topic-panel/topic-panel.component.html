@@ -1,13 +1,26 @@
-<div class="topic-panel">
-  <div class="top-panel" [ngStyle]="{background: color}">
-    <h4 class="heading">{{topic.name}}</h4>
-    <p class="description">{{topic.description}}</p>
-    <app-compact-question *ngIf="last_question" [question]="last_question" class="last-question"></app-compact-question>
-  </div>
-  <div class="fotter-bar">
-    <div class="link">
-      <p class="link-icon">🡪</p>
-      <p class="link-text">More</p>
+<div class="topic-panel container-fluid p-0 h-100 gx-3">
+  <div class="d-flex flex-column h-100">
+
+  <div class="row flex-grow-1">
+    <div class="col h-100">
+      <div class="top-panel d-flex flex-column h-100 p-3 text-white" [ngStyle]="{background: color}">
+        <h5 id="heading">{{topic.name}}</h5>
+        <p id="description">{{topic.description}}</p>
+        <div class="flex-grow-1"></div>
+        <app-compact-question *ngIf="last_question" [question]="last_question" class="last-question"></app-compact-question>
+      </div>
     </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="footer-bar">
+        <div class="d-flex align-items-center h-100">
+          <div class="text-end w-100">
+            <p class="mb-0 px-2">🡪 <a href="#" class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-reset">More</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 </div>
