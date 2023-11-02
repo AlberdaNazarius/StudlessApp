@@ -10,16 +10,11 @@ import { QuestionService } from "../../shared/services/question.service";
 })
 export class TopicPanelComponent implements OnInit {
   @Input() topic: Topic;
-  readonly color_variations = ['#1598A3', '#E99330', '#4AB551']
-  color: string;
-
   last_question: Question;
 
   constructor(private questionService: QuestionService) { }
 
   ngOnInit(): void {
-    this.color = this.color_variations[Math.floor(Math.random() * this.color_variations.length)]
     this.last_question = this.questionService.getQuestions()[0];
   }
-
 }
