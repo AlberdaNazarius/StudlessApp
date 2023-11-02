@@ -14,6 +14,10 @@ import { CompactQuestionComponent } from './shared/components/compact-question/c
 import {QuestionDetailComponent} from "./question-detail/question-detail.component";
 import { DetailBlockComponent } from './question-detail/detail-block/detail-block.component';
 import {UserInfoComponent} from "./question-detail/detail-block/user-info/user-info.component";
+import { ProfileComponent } from './profile/profile.component';
+import { ProfileService } from './shared/services/user.service';
+import { CompactAnswerComponent } from './profile/compact-answer/compact-answer.component';
+import { CompactTagComponent } from './profile/compact-tag/compact-tag.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +31,16 @@ import {UserInfoComponent} from "./question-detail/detail-block/user-info/user-i
     CompactQuestionComponent,
     QuestionDetailComponent,
     UserInfoComponent,
-    DetailBlockComponent
+    DetailBlockComponent,
+    ProfileComponent,
+    CompactAnswerComponent,
+    CompactTagComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [QuestionService],
+  providers: [QuestionService, ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

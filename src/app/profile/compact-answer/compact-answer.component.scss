@@ -1,0 +1,40 @@
+.compact-answer {
+	display: flex;
+    width: 100%;
+    flex-direction: row;
+    margin: 10px;
+    .score {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 36px;
+        width: 46px;
+        background-color: #0e2784;
+        border: 2px solid #3758CD;
+        color: #fcfcfe;
+        font-size: 12px;
+        border-radius: 7px;
+        padding: 3px;
+        margin-bottom: 5px;    }
+    .right-part {
+        display: flex;
+        flex-direction: row;
+        margin-left: 10px;
+    }
+    .heading {
+        margin: 0;
+    }
+    .metadata {
+        font-size: 12px;
+        >* {
+            display: inline-block;
+            float: right;
+            margin: 0;
+            margin-left: 10px;
+            margin-right: 5px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
