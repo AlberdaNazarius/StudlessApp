@@ -10,8 +10,8 @@ import { TopicService } from '../shared/services/topic.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  topics : Topic[];
-  last_questions : Question[];
+  topics: Topic[];
+  last_questions: Question[];
 
   constructor(private topicService: TopicService,
     private questionService: QuestionService) { }

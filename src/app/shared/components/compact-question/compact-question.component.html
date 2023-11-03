@@ -1,11 +1,11 @@
-<div class="compact-question">
-  <img class="avatar" [src]="question.author.imagePath">
-  <div class="right-part">
-    <p class="heading">{{question.questionName}}</p>
-    <div class="metadata">
-      <p>{{question.askedDate}}</p>
-      <p>·</p>
-      <a href="#">{{question.author.name}}</a>
-    </div>
+<div class="row g-0">
+  <div class="col-auto">
+    <img class="avatar" [src]="question.author.imagePath">
+  </div>
+  <div class="col right-part">
+    <p class="m-0"><a href="#"
+        class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-reset">{{question.questionName}}</a>
+    </p>
+    <p class="metadata my-0">{{question.askedDate}} · <a href="#">{{question.author.name}}</a></p>
   </div>
 </div>
