@@ -15,9 +15,11 @@ import {QuestionDetailComponent} from "./question-detail/question-detail.compone
 import { DetailBlockComponent } from './question-detail/detail-block/detail-block.component';
 import {UserInfoComponent} from "./question-detail/detail-block/user-info/user-info.component";
 import { ProfileComponent } from './profile/profile.component';
-import { ProfileService } from './shared/services/user.service';
+import { UserService } from './shared/services/user.service';
 import { CompactAnswerComponent } from './profile/compact-answer/compact-answer.component';
 import { CompactTagComponent } from './profile/compact-tag/compact-tag.component';
+import { ProfileQuestionComponent } from './profile/profile-question/profile-question.component';
+import { ProfileReputationComponent } from './profile/profile-reputation/profile-reputation.component';
 
 @NgModule({
   declarations: [
@@ -34,13 +36,15 @@ import { CompactTagComponent } from './profile/compact-tag/compact-tag.component
     DetailBlockComponent,
     ProfileComponent,
     CompactAnswerComponent,
-    CompactTagComponent
+    CompactTagComponent,
+    ProfileQuestionComponent,
+    ProfileReputationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [QuestionService, ProfileService],
+  providers: [QuestionService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

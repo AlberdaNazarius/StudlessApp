@@ -25,24 +25,14 @@ h6 {
 button {
 	margin: 0;
 }
-.profile-section {
-    
+.profile-section { 
+	width: 63%;
+	min-width: 305px;
 	box-shadow: 0px 6px 50px rgba(217,229,255,255);
-}
-.profile-info {
-    position: relative;
-	width: 100%;
-	background: #ffffff;
-	display: flex;
-	flex-direction: column;
-	border-radius: 19px;
 }
 .banner{
 	min-height: 65%;
 	height: fit-content;
-	width: 100%;
-	border-top-right-radius: 19px;
-	border-top-left-radius: 19px;
 }
 .avatar {
 	left: 15px;
@@ -85,10 +75,11 @@ button {
 	height: fit-content;
 	margin-right: 27px;
 	flex-direction: row;
-	border: 2px solid #A19D9D;
-	border-top: none;
-	border-right: none;
-	border-left: none;
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: center;
+	border-bottom: 2px solid #A19D9D;
+	
 }
 .items {
 	height: 100%;
@@ -173,6 +164,14 @@ button {
 	vertical-align: top;
 	margin-top: -3px;
 	padding: 0;
+}
+.sort{
+	margin: 0;
+	padding: 7px;
+	background-color: $background-color_5;
+	border: 1px solid #ADADAD;
+	font-size: 11px;
+	color: $color_4;
 	&:hover {
 		background-color: $background-color_3;
 	}
@@ -180,42 +179,15 @@ button {
 		background-color: $background-color_4;
 	}
 }
-.sort-score-button {
-	margin: 0;
-	padding: 7px;
-	background-color: $background-color_5;
-	border: 1px solid #ADADAD;
+.sort:first-child{
 	border-bottom-left-radius: 7px;
 	border-top-left-radius: 7px;
-	font-size: 11px;
-	color: $color_4;
 }
-.sort-activity-button {
-	margin: 0;
-	padding: 7px;
-	background-color: $background-color_5;
-	border: 1px solid #ADADAD;
-	font-size: 11px;
-	color: $color_4;
-}
-.sort-newest-button {
-	margin: 0;
-	padding: 7px;
-	background-color: $background-color_5;
-	border: 1px solid #ADADAD;
+.sort:last-child{
 	border-bottom-right-radius: 7px;
 	border-top-right-radius: 7px;
-	font-size: 11px;
-	color: $color_4;
 }
-.sort-view-button {
-	margin: 0;
-	padding: 7px;
-	background-color: $background-color_5;
-	border: 1px solid #ADADAD;
-	font-size: 11px;
-	color: $color_4;
-}
+
 .activity-field {
 	min-height: 250px;
     height: fit-content;
@@ -263,6 +235,30 @@ button {
 		float: left;
 		justify-content: start;
 		margin-left: 15px;
+	}
+}
+@media (max-width: 386px) {
+	.profile-activity{
+		width: 90%;
+	}
+	.avatar{
+		width: 32%;
+		height: 10%;
+	}
+	.membership-info{
+		float: right;
+		flex-direction: column;
+	}
+	.banner{
+		height: 70px;
+	}
+	.profile-header{
+		float: left
+	}
+}
+@media (max-width: 600px) {
+	.profile-section{
+		width: 100%;
 	}
 }
 .temp{

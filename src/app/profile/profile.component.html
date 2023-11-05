@@ -1,8 +1,8 @@
 <div class="main-content d-flex justify-content-center align-items-center">
-    <div class="profile-section w-63 h-80  mb-5 mt-4 shadow-container">
-        <div class="profile-info">
-        <img class="banner img-fluid" [src]="profile.bannerPath" alt="Profile Banner">
-        <img class="avatar position-absolute left-15 bottom-15 w-16" [src]="profile.imagePath" alt="Profile Avatar">
+    <div class="profile-section  h-80  mb-5 mt-4 shadow-container">
+        <div class="w-100 position-relative bg-white rounded d-flex flex-column">
+        <img class="banner img-fluid rounded rounded-top-34 w-100" [src]="profile.bannerPath" alt="Profile Banner">
+        <img class="avatar position-absolute start-15 bottom-15 w-16 h-50" [src]="profile.imagePath" alt="Profile Avatar">
         <div class="profile-header text-center">
             <p class="name h2">{{profile.name}}</p>
             <p class="status h5">{{profile.status}}</p>
@@ -46,14 +46,14 @@
         <div class="activity-sections">
             <h6 class="activity-title">Answers</h6>
             <div class="sort-by">
-                <button class="sort-score-button">Score</button>
-                <button class="sort-activity-button">Activity</button>
-                <button class="sort-newest-button">Newest</button>
+                <button class="sort" (click)="sortAnswersByScore()">Score</button>
+                <button class="sort">Activity</button>
+                <button class="sort">Newest</button>
             </div>
             <div class="activity-field">
                 <div class="activity-field-items">
                     <app-compact-answer
-                     *ngFor="let answer of answers.slice(0, 5)" 
+                     *ngFor="let answer of answers.slice(0, 4)" 
                      [answer]="answer" class="answer">
                     </app-compact-answer>
                 </div>
@@ -62,17 +62,20 @@
         <div class="activity-sections">
             <h6 class="activity-title">Questions</h6>
             <div class="sort-by">
-                <button class="sort-score-button">Score</button> 
-                <button class="sort-view-button">Views</button>
-                <button class="sort-activity-button">Activity</button>
-                <button class="sort-newest-button">Newest</button>
+                <div class="sort-by">
+                    <button class="sort" (click)="sortQuestionsByScore()">Score</button>
+                    <button class="sort" (click)="sortQuestionsByViews()">Views</button>
+                    <button class="sort" (click)="sortQuestionsByActivity()">Activity</button>
+                    <button class="sort">Newest</button>
+                  </div>
+                  
             </div>
             <div class="activity-field">
                 <div class="activity-field-items">
-                    <app-compact-question
-                     *ngFor="let question of questions.slice(0, 5)" 
+                    <app-profile-question
+                     *ngFor="let question of questions.slice(0, 4)" 
                      [question]="question" class="question">
-                    </app-compact-question>
+                    </app-profile-question>
                 </div>
             </div>
         </div>

@@ -1,0 +1,23 @@
+<div class="compact-answer">
+    <div *ngif="answer.votes !=0">
+        <div class="score" *ngif="answer.votes>0">{{answer.votes*10}}</div>
+        <div class="score" *ngif="answer.votes<0">{{answer.votes*-2}}</div>
+        <div class="right-part">
+        <p class="heading">{{getDescriptionSnippet(answer.description)}}</p>
+        <div class="metadata">
+            <p>{{answer.askedDate}}</p>
+        </div>
+        </div>
+    </div>
+    <div *ngif="queston.votes !=0">
+        <div class="score" *ngif="question.votes>0">{{question.votes*10}}</div>
+        <div class="score" *ngif="question.votes<0">{{question.votes*-2}}</div>
+        <div class="right-part">
+        <p class="heading">{{getDescriptionSnippet(question.description)}}</p>
+        <div class="metadata">
+            <p>{{question.askedDate}}</p>
+        </div>
+        </div>
+    </div>
+  </div>
+  

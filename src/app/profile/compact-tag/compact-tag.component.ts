@@ -32,7 +32,7 @@ export class CompactTagComponent {
         foundPair.number2 ++;
         console.log('Знайдено:', foundPair.text, foundPair.number1, foundPair.number2);
       } else {
-        this.pairs.push({text: eachTag, number1:q.votes, number2: 6})
+        this.pairs.push({text: eachTag, number1:q.votes, number2: 1})
         console.log('Пара зі шуканим текстом не знайдена.');
       }
       })
