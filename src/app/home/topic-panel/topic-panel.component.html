@@ -5,7 +5,7 @@
     <div class="col h-100">
       <div class="top-panel d-flex flex-column h-100 p-3 text-white" [ngStyle]="{background: topic.colorTheme}">
         <h5 id="heading">{{topic.name}}</h5>
-        <p id="description">{{topic.description}}</p>
+        <p id="description">{{topic.description | sliceAndDots: 120}}</p>
         <div class="flex-grow-1"></div>
         <app-compact-question *ngIf="last_question" [question]="last_question" class="last-question"></app-compact-question>
       </div>

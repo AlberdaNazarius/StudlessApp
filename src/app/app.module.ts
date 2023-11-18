@@ -19,6 +19,7 @@ import { UserService } from './shared/services/user.service';
 import { CompactAnswerComponent } from './profile/compact-answer/compact-answer.component';
 import { CompactTagComponent } from './profile/compact-tag/compact-tag.component';
 import { ProfileQuestionComponent } from './profile/profile-question/profile-question.component';
+import { SliceAndDotsPipe } from './shared/pipes/slice-and-dots.pipe';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ProfileQuestionComponent } from './profile/profile-question/profile-que
     ProfileComponent,
     CompactAnswerComponent,
     CompactTagComponent,
-    ProfileQuestionComponent
+    ProfileQuestionComponent,
+    SliceAndDotsPipe
   ],
   imports: [
     BrowserModule,
