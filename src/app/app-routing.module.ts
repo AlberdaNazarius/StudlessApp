@@ -7,7 +7,7 @@ import {QuestionDetailComponent} from "./question-detail/question-detail.compone
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: "search", component: QuestionListComponent },
-  { path: "question", component: QuestionDetailComponent}
+  { path: "search/question/:id", component: QuestionDetailComponent}
 ];
 
 @NgModule({

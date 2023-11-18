@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Question} from "../shared/models/question.model";
 import {QuestionService} from "../shared/services/question.service";
 

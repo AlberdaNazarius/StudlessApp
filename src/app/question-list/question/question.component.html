@@ -6,7 +6,7 @@
   </div>
   <div class="main-question-info">
     <p class="question">
-      <a class="question-link page-link" href="#">
+      <a class="question-link page-link" [routerLink]="['question', question.id]">
         {{question.questionName}}
       </a>
     </p>
