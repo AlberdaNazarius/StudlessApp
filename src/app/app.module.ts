@@ -19,7 +19,6 @@ import { UserService } from './shared/services/user.service';
 import { CompactAnswerComponent } from './profile/compact-answer/compact-answer.component';
 import { CompactTagComponent } from './profile/compact-tag/compact-tag.component';
 import { ProfileQuestionComponent } from './profile/profile-question/profile-question.component';
-import { ProfileReputationComponent } from './profile/profile-reputation/profile-reputation.component';
 
 @NgModule({
   declarations: [
@@ -37,8 +36,7 @@ import { ProfileReputationComponent } from './profile/profile-reputation/profile
     ProfileComponent,
     CompactAnswerComponent,
     CompactTagComponent,
-    ProfileQuestionComponent,
-    ProfileReputationComponent
+    ProfileQuestionComponent
   ],
   imports: [
     BrowserModule,
