@@ -8,7 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: "search", component: QuestionListComponent },
-  { path: "question", component: QuestionDetailComponent},
+  { path: "search/question/:id", component: QuestionDetailComponent},
   { path: "profile", component: ProfileComponent}
 ];
 
