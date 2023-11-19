@@ -1,14 +1,14 @@
 <header id="main-header" class="p-3 mb-3 border-bottom bg-white fixed-top">
   <div class="container">
     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+      <a class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
         <img class="bi me-2" width="40" height="32" src="assets/images/logo.png">
         <a class="nav-link link-dark fw-bold">Studless</a>
       </a>
 
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-4 link-dark">Home</a></li>
-        <li><a href="#" class="nav-link px-1 link-dark">Questions</a></li>
+        <li><a routerLink="" class="nav-link px-4 link-dark">Home</a></li>
+        <li><a routerLink="search" class="nav-link px-1 link-dark">Questions</a></li>
       </ul>
 
       <form class="col-10 col-lg-6 mb-3 mb-lg-0 m-auto">
@@ -17,10 +17,10 @@
 
       <div class="text-end">
         <a *ngIf="isLogged; else buttons"
-           href="#" class="d-block link-dark text-decoration-none"
+           [routerLink]="['profile', user.id]" class="d-block link-dark text-decoration-none"
            aria-expanded="false">
           <img src="assets/images/profile-logo.png" alt="mdo" width="32" height="32" class="rounded-circle">
-          <span class="mx-1">{{nickName}}</span>
+          <span class="mx-1">{{user.name}}</span>
         </a>
         <ng-template #buttons>
           <button type="button" class="btn btn-outline-primary me-2 login-button">Login</button>

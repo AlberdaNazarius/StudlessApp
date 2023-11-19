@@ -3,9 +3,9 @@
     <img class="avatar" [src]="question.author.imagePath">
   </div>
   <div class="col right-part">
-    <p class="m-0"><a href="#"
+    <p class="m-0"><a [routerLink]="['question', question.id]"
         class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-reset">{{question.questionName | sliceAndDots: 80}}</a>
     </p>
-    <p class="metadata my-0">{{question.askedDate}} · <a href="#">{{question.author.name}}</a></p>
+    <p class="metadata my-0">{{question.askedDate}} · <a [routerLink]="['profile', question.author.id]">{{question.author.name}}</a></p>
   </div>
 </div>

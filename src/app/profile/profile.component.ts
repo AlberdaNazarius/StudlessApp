@@ -4,6 +4,7 @@ import { UserService } from '../shared/services/user.service';
 import { Question } from 'src/app/shared/models/question.model';
 import { Answer } from 'src/app/shared/models/answer-model';
 import {QuestionService} from "src/app/shared/services/question.service";
+import {ActivatedRoute, Params} from "@angular/router";
 
 @Component({
   selector: 'app-profile',
@@ -15,17 +16,23 @@ export class ProfileComponent implements OnInit{
   questions: Question[];
   answers: Answer[];
 
-  constructor(private userService: UserService,private questionService: QuestionService) { }
+  constructor(private userService: UserService,
+              private questionService: QuestionService,
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.profile = this.userService.getUser();
-    this.questions = this.questionService.getQuestions();
-    this.answers = this.questionService.getAnswers();
+    this.route.params.subscribe(
+      (params: Params) => {
+        this.profile = this.userService.getUser(params['id']);
+        this.questions = this.questionService.getQuestions();
+        this.answers = this.questionService.getAnswers();
+      }
+    );
   }
   sortQuestionsByScore() :void {
     this.questions.sort((a, b) => b.votes - a.votes);
   }
-  
+
   sortQuestionsByViews(): void{
     this.questions.sort((a, b) => b.views - a.views);
   }
