@@ -1,0 +1,13 @@
+<div class="compact-tag">
+  {{getTagsData()}}
+    <div class="tag" *ngFor="let item of pairs">
+        <div class="tags">{{ item.text}}
+        <div class="circle"></div></div>
+        <div class="left">
+          <div class="score"> {{item.number1 }} <p class="text">, score</p></div>
+          <div class="posts">{{item.number2}} <p class="text">, posts</p></div>
+        </div> 
+    </div>
+    <ng-content></ng-content> 
+  </div>
+  

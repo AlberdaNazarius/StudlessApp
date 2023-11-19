@@ -1,0 +1,105 @@
+<div class="main-content d-flex justify-content-center align-items-center">
+    <div class="profile-section  h-80  mb-5 mt-4 shadow-container">
+        <div class="w-100 position-relative bg-white rounded d-flex flex-column">
+        <img class="banner img-fluid rounded rounded-top-34 w-100" [src]="profile.bannerPath" alt="Profile Banner">
+        <img class="avatar position-absolute start-15 bottom-15 w-16 h-50" [src]="profile.imagePath" alt="Profile Avatar">
+        <div class="profile-header text-center">
+            <p class="name h2">{{profile.name}}</p>
+            <p class="status h5">{{profile.status}}</p>
+        </div>
+        <div class="general-profile-info ">
+            <div class="profile-activity mt-4 d-flex justify-content-end">
+                <div class="items text-center">
+                    <p class="default-text">Messages</p>
+                    <a href="#" class="activity-ref">{{profile.messages}}</a>
+                </div>
+                <div class="items text-center">
+                    <p class="default-text">Solutions</p>
+                    <p class="default-bold-text">{{profile.solutions}}</p>
+                </div>
+                <div class="items text-center">
+                    <p class="default-text">Featured Content</p>
+                    <a href="#" class="activity-ref">{{profile.featuredContent}}</a>
+                </div>
+                <div class="items text-center">
+                    <p class="default-text">Reactions Score</p>
+                    <div class="default-bold-text">{{profile.reactionsScore}}</div>
+                </div>
+                <div class="items text-center">
+                    <p class="default-text">Points</p>
+                    <a href="#" class="activity-ref">{{profile.points}}</a>
+                </div>
+            </div>
+            <div class="membership-info w-15 ml-22 d-flex align-items-center  pt-3 pb-2">
+                <div class="join-date d-flex flex-wrap mr-30">
+                    <p class="default-text">Joined:&nbsp;&nbsp;</p>
+                    <time class="default-bold-text">{{profile.joinDate| date:'MMMM d, y' }}</time>
+                </div>
+                <div class="online-status d-flex flex-wrap mr-30">
+                    <p class="default-text">Last seen:&nbsp;&nbsp;</p>
+                    <p class="default-bold-text">{{profile.onlineStatus}} minutes ago</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="general-user-activity">
+        <div class="activity-sections">
+            <h6 class="activity-title">Answers</h6>
+            <div class="sort-by">
+                <button class="sort" (click)="sortAnswersByScore()">Score</button>
+                <button class="sort">Activity</button>
+                <button class="sort">Newest</button>
+            </div>
+            <div class="activity-field">
+                <div class="activity-field-items">
+                    <app-compact-answer
+                     *ngFor="let answer of answers.slice(0, 4)" 
+                     [answer]="answer" class="answer">
+                    </app-compact-answer>
+                </div>
+            </div>
+        </div>
+        <div class="activity-sections">
+            <h6 class="activity-title">Questions</h6>
+            <div class="sort-by">
+                <div class="sort-by">
+                    <button class="sort" (click)="sortQuestionsByScore()">Score</button>
+                    <button class="sort" (click)="sortQuestionsByViews()">Views</button>
+                    <button class="sort" (click)="sortQuestionsByActivity()">Activity</button>
+                    <button class="sort">Newest</button>
+                  </div>
+                  
+            </div>
+            <div class="activity-field">
+                <div class="activity-field-items">
+                    <app-profile-question
+                     *ngFor="let question of questions.slice(0, 4)" 
+                     [question]="question" class="question">
+                    </app-profile-question>
+                </div>
+            </div>
+        </div>
+        <div class="activity-sections">
+            <h6 class="activity-title">Tags</h6>
+            <div class="activity-field">
+                <div class="activity-field-items">
+                    <app-compact-tag>
+                    </app-compact-tag>
+                     
+                </div>
+            </div>
+        </div>
+        <div class="activity-sections">
+            <h6 class="activity-title">Reputation</h6>
+            <div class="activity-field">
+                <div class="activity-field-items">
+                    <p class="activity-field-text">You have no</p>
+                    <a href="#" class="activity-field-ref">reputation</a>  
+                    <p class="activity-field-text">changes</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+</div>
