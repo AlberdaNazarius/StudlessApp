@@ -11,4 +11,12 @@ export class DetailBlockComponent {
   @Input() votes: number;
   @Input() author: User;
   @Input() askedDate: string;
+
+  increaseVotes(): void {
+    this.votes++;
+  }
+
+  decreaseVotes(): void {
+    this.votes--;
+  }
 }
