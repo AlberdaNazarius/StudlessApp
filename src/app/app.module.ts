@@ -20,6 +20,9 @@ import { CompactAnswerComponent } from './profile/compact-answer/compact-answer.
 import { CompactTagComponent } from './profile/compact-tag/compact-tag.component';
 import { ProfileQuestionComponent } from './profile/profile-question/profile-question.component';
 import { SliceAndDotsPipe } from './shared/pipes/slice-and-dots.pipe';
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatTableModule} from "@angular/material/table";
+import { PaginatorComponent } from './paginator/paginator.component';
 
 @NgModule({
   declarations: [
@@ -38,11 +41,14 @@ import { SliceAndDotsPipe } from './shared/pipes/slice-and-dots.pipe';
     CompactAnswerComponent,
     CompactTagComponent,
     ProfileQuestionComponent,
-    SliceAndDotsPipe
+    SliceAndDotsPipe,
+    PaginatorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatPaginatorModule,
+    MatTableModule
   ],
   providers: [QuestionService, UserService],
   bootstrap: [AppComponent]
