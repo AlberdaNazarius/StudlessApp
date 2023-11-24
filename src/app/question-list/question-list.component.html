@@ -1,17 +1,25 @@
-<div class="col d-flex flex-column align-items-center bg-white">
-  <div class="shadow-container">
-    <div class="row my-5 mx-2">
-      <div class="col col-lg-10 col-sm-9 col-8">
-        <h2 class="h2 fw-normal">Search results</h2>
-        <span>{{questions.length}} questions</span>
+<div class="bg-white h-100">
+  <div class="col d-flex flex-column align-items-center bg-white">
+    <div class="shadow-container">
+      <div class="row my-5 mx-2">
+        <div class="col col-lg-10 col-sm-9 col-8">
+          <h2 class="h2 fw-normal">Search results</h2>
+          <span>{{questions.length}} questions</span>
+        </div>
+        <div class="col col-lg-2 col-sm-3 col-4">
+          <button class="btn btn-primary d-inline-block p-2 text-nowrap">Ask Question</button>
+        </div>
       </div>
-      <div class="col col-lg-2 col-sm-3 col-4">
-        <button class="btn btn-primary d-inline-block p-2 text-nowrap">Ask Question</button>
+      <hr class="mx-0 mx-md-3">
+      <div class="row" *ngFor="let question of currentPageData">
+        <app-question [questionInfo]="question"></app-question>
       </div>
-    </div>
-    <hr class="mx-0 mx-md-3">
-    <div class="row" *ngFor="let question of questions">
-      <app-question [questionInfo]="question"></app-question>
     </div>
   </div>
+  <app-paginator [totalItems]="questions.length"
+                 [pageSize]="pageSize"
+                 [pageIndex]="currentPageIndex"
+                 (pageChanged)="onPageChanged($event)">
+  </app-paginator>
+
 </div>

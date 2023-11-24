@@ -1,4 +1,4 @@
-<a class="link page-link link-secondary" href="#">
+<a class="link page-link link-secondary" [routerLink]="['/profile', user.id]">
   <span>asked {{askedDate}} by </span>
   <img class="img-fluid mx-1" width="20" height="20" src="assets/images/profile-logo.png">
   <span>{{user.name}}</span>
