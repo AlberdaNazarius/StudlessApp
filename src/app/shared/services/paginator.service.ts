@@ -17,11 +17,11 @@ export class PaginatorService {
   }
 
 
-  public get currentPage(): number {
+  get currentPage(): number {
     return this._currentPage;
   }
 
-  public setCurrentPage(index: number): void {
+  set currentPage(index: number) {
     this._currentPage = index;
   }
 }

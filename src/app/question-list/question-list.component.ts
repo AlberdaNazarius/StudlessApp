@@ -29,7 +29,7 @@ export class QuestionListComponent implements OnInit{
   }
 
   onPageChanged(event: PageEvent) {
-    this.paginatorService.setCurrentPage(event.pageIndex);
+    this.paginatorService.currentPage = event.pageIndex;
     this.currentPageIndex = this.paginatorService.currentPage;
     const indexes = this.paginatorService.changePage(this.pageSize);
     this.currentPageData = this.questions.slice(indexes.startId, indexes.endId);
