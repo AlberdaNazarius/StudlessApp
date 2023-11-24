@@ -10,10 +10,11 @@ import {PaginatorService} from "../shared/services/paginator.service";
   styleUrls: ['./question-list.component.scss']
 })
 export class QuestionListComponent implements OnInit{
+  pageSize: number = 3;
+
   questions: Question[];
   currentPageData: Question[];
   currentPageIndex: number;
-  pageSize: number;
 
   constructor(private questionService: QuestionService,
               private paginatorService: PaginatorService) {
@@ -22,14 +23,15 @@ export class QuestionListComponent implements OnInit{
   ngOnInit(): void {
     this.questions = this.questionService.getQuestions();
 
-    this.pageSize = 3;
-    this.currentPageData = this.paginatorService.initializePageData<Question>(this.questions, this.pageSize);
+    const indexes = this.paginatorService.changePage(this.pageSize);
+    this.currentPageData = this.questions.slice(indexes.startId, indexes.endId);
     this.currentPageIndex = this.paginatorService.currentPage;
   }
 
   onPageChanged(event: PageEvent) {
     this.paginatorService.setCurrentPage(event.pageIndex);
     this.currentPageIndex = this.paginatorService.currentPage;
-    this.currentPageData = this.paginatorService.changePage();
+    const indexes = this.paginatorService.changePage(this.pageSize);
+    this.currentPageData = this.questions.slice(indexes.startId, indexes.endId);
   }
 }

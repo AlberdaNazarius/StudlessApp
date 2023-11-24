@@ -22,7 +22,7 @@ import { ProfileQuestionComponent } from './profile/profile-question/profile-que
 import { SliceAndDotsPipe } from './shared/pipes/slice-and-dots.pipe';
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatTableModule} from "@angular/material/table";
-import { PaginatorComponent } from './paginator/paginator.component';
+import {PaginatorComponent} from "./shared/components/paginator/paginator.component";
 
 @NgModule({
   declarations: [
