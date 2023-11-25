@@ -1,4 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
+import { AuthService } from './shared/services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,11 @@ import {Component, HostListener, OnInit} from '@angular/core';
 })
 export class AppComponent implements OnInit{
   delayInMilliseconds: number = 0;
+  
+  constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
+    this.authService.autoLogin();
     setTimeout(this.addPaddingTopBasedOnHeaderSize, this.delayInMilliseconds);
   }
 
