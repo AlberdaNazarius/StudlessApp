@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
-import { AuthData } from '../models/auth-data.model';
 import { Subject, delay, of } from 'rxjs';
 import { Router } from '@angular/router';
+import { AuthDataHelper } from '../utils/auth-data-utils';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  authData$ = new Subject<AuthData>();
-  private _authData: AuthData = new AuthData(null);
+  authData$ = new Subject<string | null>();
+  private _authData: string | null = null;
 
   get authData() { return this._authData; }
 
@@ -16,11 +16,11 @@ export class AuthService {
     this._authData = newAuthData;
     this.authData$.next(this._authData);
 
-    if (!this._authData.token) {
+    if (!this._authData) {
       localStorage.removeItem('token');
       return;
     }
-    localStorage.setItem('token', this._authData.token);
+    localStorage.setItem('token', this._authData);
   }
 
   constructor(private router: Router) { }
@@ -29,7 +29,7 @@ export class AuthService {
     // TODO: Remove this and implement http request for registration
     let observable = of("valid_test_token").pipe(delay(2000));
     observable.subscribe(res => {
-      this.authData = new AuthData(res);
+      this.authData = res;
     })
     return observable;
   }
@@ -38,7 +38,7 @@ export class AuthService {
     // TODO: Remove this and implement http request for login
     let observable = of("valid_test_token").pipe(delay(2000));
     observable.subscribe(res => {
-      this.authData = new AuthData(res);
+      this.authData = res;
     })
     return observable;
   }
@@ -48,14 +48,12 @@ export class AuthService {
     if (!storedToken)
       return;
 
-    let loadedAuthData = new AuthData(storedToken);
-
-    if (loadedAuthData.token)
-      this.authData = loadedAuthData;
+    if (AuthDataHelper.isValid(storedToken))
+      this.authData = storedToken;
   }
 
   logout() {
-    this.authData = new AuthData(null);
+    this.authData = null;
     this.router.navigate(['']);
   }
 }
