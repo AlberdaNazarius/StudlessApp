@@ -10,14 +10,7 @@ export class UserService {
     new User(3, "assets/images/profile-logo.png", "assets/images/profile-banner.png","FourthUser", "moderator", 331, 3234, 0, 1, 6258, 22435, new Date('2023-11-01'), 5)
   ]
 
-  private authUser: User = this.users[0];
-
-
   public getUser(id: number): User {
     return this.users[id];
-  }
-
-  public getAuthenticatedUser(): User {
-    return this.authUser;
   }
 }
