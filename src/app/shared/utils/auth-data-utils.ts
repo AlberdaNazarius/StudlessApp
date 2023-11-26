@@ -10,7 +10,7 @@ export class AuthDataHelper {
 
   public static getUserName(token: string) {
     // TODO: Change to extracting userName field from token when backend implemented
-    return 'Linux lover';
+    return 'LNU enjoyer';
   }
 
   public static getExpirationDate(token: string) {
