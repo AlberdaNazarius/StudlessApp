@@ -26,6 +26,8 @@ import { PaginatorComponent } from "./shared/components/paginator/paginator.comp
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptorService } from './shared/services/auth-interceptor.service';
 import { AuthExpiredInterceptorService } from './shared/services/auth-expired-interceptor.service';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -45,13 +47,15 @@ import { AuthExpiredInterceptorService } from './shared/services/auth-expired-in
     CompactTagComponent,
     ProfileQuestionComponent,
     SliceAndDotsPipe,
-    PaginatorComponent
+    PaginatorComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    FormsModule
   ],
   providers: [
     QuestionService,
