@@ -15,14 +15,24 @@ export class HeaderComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
+    this.checkAuthData(this.authService.authData);
+
     this.authService.authData$.subscribe((res) => {
-      if (!res) {
-        this.isLogged = false;
-        return;
-      }
-      this.userId = AuthDataHelper.getUserId(res);
-      this.userName = AuthDataHelper.getUserName(res);
-      this.isLogged = true;
+      this.checkAuthData(res);
     })
+  }
+
+  checkAuthData(token: string | null) {
+    if (!token) {
+      this.isLogged = false;
+      return;
+    }
+    this.userId = AuthDataHelper.getUserId(token);
+    this.userName = AuthDataHelper.getUserName(token);
+    this.isLogged = true;
+  }
+
+  onLogout() {
+    this.authService.logout();
   }
 }
