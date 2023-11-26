@@ -8,7 +8,7 @@ export const canActivateAuth: CanActivateFn = (
   const authService = inject(AuthService);
   const router = inject(Router);
 
-  if (!!authService.authData.token)
+  if (!!authService.authData)
     return true;
 
   return router.createUrlTree(['/']);
