@@ -11,7 +11,7 @@
           <input type="password" class="password" placeholder="Password" id="password" ngModel name="password" required #password="ngModel">
         </form>
         <div><h2>Forgot password</h2></div>
-        <input [disabled]="isLoading ||  !loginForm.valid" type="submit" class="login-button" value="Sing in"/>
+        <input [disabled]="isLoading ||  !loginForm.valid" type="submit" class="login-button" value="Login"/>
         <h2>Didn`t have any account? <a [routerLink]="['/signup']" class="activity-ref">Sign up here</a></h2>
        </form> 
       </div>
