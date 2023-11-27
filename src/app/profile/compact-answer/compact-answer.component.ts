@@ -2,6 +2,8 @@ import { Component, Input } from '@angular/core';
 import { Answer } from 'src/app/shared/models/answer-model';
 import { Question } from 'src/app/shared/models/question.model';
 import {QuestionService} from "src/app/shared/services/question.service";
+import { OnInit } from '@angular/core';
+
 
 
 @Component({
@@ -9,12 +11,15 @@ import {QuestionService} from "src/app/shared/services/question.service";
   templateUrl: './compact-answer.component.html',
   styleUrls: ['./compact-answer.component.scss']
 })
-export class CompactAnswerComponent {
+export class CompactAnswerComponent implements OnInit{
   @Input() answer: Answer;
-  @Input( )question: Question[];
+  @Input()question: Question[];
 
   constructor(private questionService: QuestionService) {
-    this.question = questionService.getQuestions();
+
+   }
+   ngOnInit(): void {
+    this.question = this.questionService.getQuestions();
    }
 
   getDescriptionSnippet(answer: string): string {
@@ -29,14 +34,12 @@ export class CompactAnswerComponent {
       else return answer.substring(0, 40) + '...';
     
   }
-  findAnswerByQuestion(id:number): number{
+  findQuestionByAnswer(id:number): number | null{
     for(const quest of this.question){
       for(const answ of quest.answers){
-      if(answ.id == id)return quest.id;
+        if(answ.id == id)return quest.id;
+      }
     }
-    }
-    return 5;
+    return null;
   }
-
-  
 }

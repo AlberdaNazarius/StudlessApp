@@ -5,7 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { QuestionDetailComponent } from "./question-detail/question-detail.component";
 import { ProfileComponent } from './profile/profile.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './auth/login/login.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },

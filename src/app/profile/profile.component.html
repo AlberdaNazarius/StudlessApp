@@ -46,9 +46,9 @@
         <div class="activity-sections">
             <h6 class="activity-title">Answers</h6>
             <div class="sort-by">
-                <button class="sort" (click)="sortAnswersByScore()">Score</button>
+                <button class="sort" (click)="sort.sortAnswersByScore()">Score</button>
                 <button class="sort">Activity</button>
-                <button class="sort" (click)="sortAnswersByDate()">Newest</button>
+                <button class="sort" (click)="sort.sortAnswersByDate()">Newest</button>
             </div>
             <div class="activity-field">
                 <div class="activity-field-items">
@@ -63,9 +63,9 @@
             <h6 class="activity-title">Questions</h6>
             <div class="sort-by">
                 <div class="sort-by">
-                    <button class="sort" (click)="sortQuestionsByScore()">Score</button>
-                    <button class="sort" (click)="sortQuestionsByViews()">Views</button>
-                    <button class="sort" (click)="sortQuestionsByActivity()">Activity</button>
+                    <button class="sort" (click)="sort.sortQuestionsByScore()">Score</button>
+                    <button class="sort" (click)="sort.sortQuestionsByViews()">Views</button>
+                    <button class="sort" (click)="sort.sortQuestionsByActivity()">Activity</button>
                     <button class="sort">Newest</button>
                   </div>
                   

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { AuthService } from '../shared/services/auth.service';
+import { AuthService } from '../../shared/services/auth.service';
 import { Router } from '@angular/router';
 
 
@@ -32,16 +32,3 @@ export class LoginComponent {
     });
   }
 }
-
-
-
-
-
-
-
-  
-
-
-
-
-    

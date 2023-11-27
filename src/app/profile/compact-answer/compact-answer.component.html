@@ -1,7 +1,7 @@
 <div class="compact-answer">
     <div class="score">{{answer.votes}}</div>
     <div class="right-part">
-      <a class="heading" [routerLink]="['/question', findAnswerByQuestion(answer.id)]">{{getDescriptionSnippet(answer.description)}}</a>
+      <a class="heading" [routerLink]="['/question', findQuestionByAnswer(answer.id)]">{{getDescriptionSnippet(answer.description)}}</a>
       <div class="metadata">
         <p>{{answer.askedDate}}</p>
       </div>

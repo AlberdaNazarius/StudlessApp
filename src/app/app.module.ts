@@ -28,8 +28,7 @@ import { AuthInterceptorService } from './shared/services/auth-interceptor.servi
 import { AuthExpiredInterceptorService } from './shared/services/auth-expired-interceptor.service';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { FormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './auth/login/login.component';
 
 @NgModule({
   declarations: [
@@ -58,9 +57,8 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     MatPaginatorModule,
     MatTableModule,
-    FormsModule,
-    BrowserAnimationsModule
-  ],
+    FormsModule
+    ],
   providers: [
     QuestionService,
     UserService,

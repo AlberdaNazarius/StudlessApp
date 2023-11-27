@@ -5,6 +5,7 @@ import { Question } from 'src/app/shared/models/question.model';
 import { Answer } from 'src/app/shared/models/answer-model';
 import {QuestionService} from "src/app/shared/services/question.service";
 import {ActivatedRoute, Params} from "@angular/router";
+import { SortData } from '../shared/utils/sort-utils';
 
 @Component({
   selector: 'app-profile',
@@ -15,6 +16,7 @@ export class ProfileComponent implements OnInit{
   profile : User;
   questions: Question[];
   answers: Answer[];
+  sort: SortData;
 
   constructor(private userService: UserService,
               private questionService: QuestionService,
@@ -26,36 +28,8 @@ export class ProfileComponent implements OnInit{
         this.profile = this.userService.getUser(params['id']);
         this.questions = this.questionService.getQuestions();
         this.answers = this.questionService.getAnswers();
+        this.sort = new SortData(this.questions,this.answers);
       }
     );
-  }
-  sortQuestionsByScore() :void {
-    this.questions.sort((a, b) => b.votes - a.votes);
-  }
-
-  sortQuestionsByViews(): void{
-    this.questions.sort((a, b) => b.views - a.views);
-  }
-  sortAnswersByScore() :void {
-    this.answers.sort((a, b) => b.votes - a.votes);
-  }
-  sortQuestionsByActivity() {
-  }
-   convertStringToDate(dateString: string): Date {
-    const date = new Date(dateString);
-
-    if (isNaN(date.getTime())) {
-      throw new Error('Invalid date string');
-    }
-
-    return date;
-  }
-   sortAnswersByDate() {
-     this.answers.sort((a, b) => {
-      const dateA = this.convertStringToDate(a.askedDate);
-      const dateB = this.convertStringToDate(b.askedDate);
-
-      return dateA.getTime() - dateB.getTime();
-    });
   }
 }
