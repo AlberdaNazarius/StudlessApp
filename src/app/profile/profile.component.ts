@@ -40,6 +40,22 @@ export class ProfileComponent implements OnInit{
     this.answers.sort((a, b) => b.votes - a.votes);
   }
   sortQuestionsByActivity() {
-    // Реалізуйте сортування за активністю
+  }
+   convertStringToDate(dateString: string): Date {
+    const date = new Date(dateString);
+
+    if (isNaN(date.getTime())) {
+      throw new Error('Invalid date string');
+    }
+
+    return date;
+  }
+   sortAnswersByDate() {
+     this.answers.sort((a, b) => {
+      const dateA = this.convertStringToDate(a.askedDate);
+      const dateB = this.convertStringToDate(b.askedDate);
+
+      return dateA.getTime() - dateB.getTime();
+    });
   }
 }

@@ -1,0 +1,19 @@
+<link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
+<div class="page-container">
+    <div class="login-form">
+      <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+        <div><h1> Login here</h1></div>
+        <form class="input-section">
+          <input type="email" class="email" placeholder="Email" id="username" ngModel name="email" required email #email="ngModel">
+          <div *ngIf="!email.valid && email.touched" class="error">Please enter valid email.</div>
+        </form>
+        <form class="input-section">
+          <input type="password" class="password" placeholder="Password" id="password" ngModel name="password" required #password="ngModel">
+        </form>
+        <div><h2>Forgot password</h2></div>
+        <input [disabled]="isLoading ||  !loginForm.valid" type="submit" class="login-button" value="Sing in"/>
+        <h2>Didn`t have any account? <a [routerLink]="['/signup']" class="activity-ref">Sign up here</a></h2>
+       </form> 
+      </div>
+  
+</div>

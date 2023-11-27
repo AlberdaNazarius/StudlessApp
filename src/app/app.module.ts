@@ -28,6 +28,8 @@ import { AuthInterceptorService } from './shared/services/auth-interceptor.servi
 import { AuthExpiredInterceptorService } from './shared/services/auth-expired-interceptor.service';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -48,14 +50,16 @@ import { FormsModule } from '@angular/forms';
     ProfileQuestionComponent,
     SliceAndDotsPipe,
     PaginatorComponent,
-    SignUpComponent
+    SignUpComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatPaginatorModule,
     MatTableModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [
     QuestionService,
