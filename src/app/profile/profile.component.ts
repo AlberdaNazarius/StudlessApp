@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import { User } from '../shared/models/user.model';
 import { UserService } from '../shared/services/user.service';
 import { Question } from 'src/app/shared/models/question.model';
-import { Answer } from 'src/app/shared/models/answer-model';
+import { Answer } from 'src/app/shared/models/answer.model';
 import {QuestionService} from "src/app/shared/services/question.service";
 import {ActivatedRoute, Params} from "@angular/router";
 import { SortData } from '../shared/utils/sort-utils';

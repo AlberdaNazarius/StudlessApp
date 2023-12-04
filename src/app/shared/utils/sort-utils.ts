@@ -1,4 +1,4 @@
-import { Answer } from 'src/app/shared/models/answer-model';
+import { Answer } from 'src/app/shared/models/answer.model';
 import { Question } from 'src/app/shared/models/question.model';
 
 export class SortData{
@@ -7,7 +7,7 @@ export class SortData{
     sortQuestionsByScore() :void {
         this.questions.sort((a, b) => b.votes - a.votes);
       }
-    
+
       sortQuestionsByViews(): void{
         this.questions.sort((a, b) => b.views - a.views);
       }
@@ -18,18 +18,18 @@ export class SortData{
       }
        convertStringToDate(dateString: string): Date {
         const date = new Date(dateString);
-    
+
         if (isNaN(date.getTime())) {
           throw new Error('Invalid date string');
         }
-    
+
         return date;
       }
        sortAnswersByDate() {
          this.answers.sort((a, b) => {
           const dateA = this.convertStringToDate(a.askedDate);
           const dateB = this.convertStringToDate(b.askedDate);
-    
+
           return dateA.getTime() - dateB.getTime();
         });
       }

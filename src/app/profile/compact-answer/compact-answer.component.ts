@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Answer } from 'src/app/shared/models/answer-model';
+import { Answer } from 'src/app/shared/models/answer.model';
 import { Question } from 'src/app/shared/models/question.model';
 import {QuestionService} from "src/app/shared/services/question.service";
 import { OnInit } from '@angular/core';
@@ -32,7 +32,7 @@ export class CompactAnswerComponent implements OnInit{
         return answer.substring(0, 60-((600-windowWidth)/6)) + '...';
       }
       else return answer.substring(0, 40) + '...';
-    
+
   }
   findQuestionByAnswer(id:number): number | null{
     for(const quest of this.question){
