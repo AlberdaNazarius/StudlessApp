@@ -16,7 +16,8 @@
       <app-detail-block [author]="question.author"
                         [description]="question.description"
                         [votes]="question.votes"
-                        [askedDate]="question.askedDate">
+                        [askedDate]="question.askedDate"
+                        [isQuestion]="true">
       </app-detail-block>
     </div>
     <div class="row">
@@ -25,7 +26,8 @@
                           [author]="answer.author"
                           [description]="answer.description"
                           [votes]="answer.votes"
-                          [askedDate]="answer.askedDate">
+                          [askedDate]="answer.answeredDate"
+                          [isQuestion]="false">
         </app-detail-block>
     </div>
   </div>

@@ -19,7 +19,7 @@
         <img class="image-avatar" [src]="author.imagePath" alt="author_image">
         <a class="avatar-name page-link" [routerLink]="['/profile', author.id]">{{author.name}}</a>
         <h5 class="user-rating">{{author.rating}}</h5>
-        <time class="time">asked {{question.askedDate}} ago</time>
+        <time class="time">asked {{question.askedDate | date:'dd/MM/yyyy'}} </time>
       </div>
     </div>
   </div>

@@ -26,11 +26,12 @@ export class SortData{
         return date;
       }
        sortAnswersByDate() {
-         this.answers.sort((a, b) => {
-          const dateA = this.convertStringToDate(a.askedDate);
-          const dateB = this.convertStringToDate(b.askedDate);
+      //TODO fix
+         // this.answers.sort((a, b) => {
+          // const dateA = this.convertStringToDate(a.askedDate);
+          // const dateB = this.convertStringToDate(b.askedDate);
 
-          return dateA.getTime() - dateB.getTime();
-        });
+          // return dateA.getTime() - dateB.getTime();
+        // });
       }
 }

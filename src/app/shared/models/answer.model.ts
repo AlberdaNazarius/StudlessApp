@@ -5,6 +5,6 @@ export class Answer {
               public votes: number,
               public description: string,
               public author: User,
-              public askedDate: string) {
+              public answeredDate: Date) {
   }
 }

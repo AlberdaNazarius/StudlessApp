@@ -10,7 +10,7 @@ export class Question {
               public tags: Tag[],
               public votes: number,
               public views: number,
-              public askedDate: string,
+              public askedDate: Date,
               public author: User,
               public topic: Topic,
               public answers: Answer[]

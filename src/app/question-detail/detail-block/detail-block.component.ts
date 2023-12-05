@@ -10,7 +10,8 @@ export class DetailBlockComponent {
   @Input() description: string;
   @Input() votes: number;
   @Input() author: User;
-  @Input() askedDate: string;
+  @Input() askedDate: Date;
+  @Input() isQuestion: boolean;
 
   increaseVotes(): void {
     this.votes++;
