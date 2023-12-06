@@ -21,6 +21,7 @@ export class CompactTagComponent {
   getTagsData(): void{
     this.pairs = [];
     this.question = this.questionService.getQuestions();
+    // TODO fix this
     // this.question.forEach((q: Question) => {
     //   q.tags.forEach((eachTag: String) =>{
     //     const searchText = eachTag;
