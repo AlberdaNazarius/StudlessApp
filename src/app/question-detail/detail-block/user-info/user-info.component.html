@@ -2,7 +2,7 @@
   <span *ngIf="isQuestion; then question else answer"></span>
   <ng-template  #question>asked</ng-template>
   <ng-template  #answer>answered</ng-template>
-  <span> {{askedDate | date:'dd/MM/yyyy'}} by</span>
+  <span> {{askedDate | date:'dd/MM/yyyy'}} by </span>
   <img class="img-fluid mx-1" width="20" height="20" src="assets/images/profile-logo.png">
   <span>{{user.name}}</span>
 </a>
