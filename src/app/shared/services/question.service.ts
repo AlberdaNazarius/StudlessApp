@@ -1,7 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Question } from "../models/question.model";
 import {Answer} from "../models/answer.model";
-import { UserService } from "./user.service";
 import {HttpClient} from "@angular/common/http";
 import {map, Observable} from "rxjs";
 @Injectable()
@@ -10,8 +9,7 @@ export class QuestionService {
   private answers: Answer[] = []
   private questions: Question[] = []
 
-  constructor(private user: UserService,
-              private http: HttpClient) {
+  constructor(private http: HttpClient) {
   }
 
   public getQuestions() {
