@@ -13,13 +13,15 @@ import { OnInit } from '@angular/core';
 })
 export class CompactAnswerComponent implements OnInit{
   @Input() answer: Answer;
-  @Input()question: Question[];
+  @Input() question: Question[];
 
   constructor(private questionService: QuestionService) {
 
    }
    ngOnInit(): void {
-    this.question = this.questionService.getQuestions();
+     this.questionService.getQuestions().subscribe(responseData => {
+       this.question = responseData;
+     })
    }
 
   getDescriptionSnippet(answer: string): string {
@@ -36,8 +38,8 @@ export class CompactAnswerComponent implements OnInit{
   }
   findQuestionByAnswer(id:number): number | null{
     for(const quest of this.question){
-      for(const answ of quest.answers){
-        if(answ.id == id)return quest.id;
+      for(const answer of quest.answers){
+        if(answer.id == id)return quest.id;
       }
     }
     return null;

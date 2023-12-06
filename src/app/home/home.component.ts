@@ -14,14 +14,15 @@ export class HomeComponent implements OnInit {
   last_questions: Question[];
 
   constructor(private topicService: TopicService,
-    private questionService: QuestionService) { }
+              private questionService: QuestionService) { }
 
   ngOnInit(): void {
     // Setting page background color
     document.body.style.backgroundColor = '#f1f2f4';
     // Set properties values
     this.topics = this.topicService.getTopics();
-    //TODO change this
-    this.last_questions = this.questionService.getQuestions();
+    this.questionService.getQuestions().subscribe(responseData => {
+      this.last_questions = responseData;
+    })
   }
 }

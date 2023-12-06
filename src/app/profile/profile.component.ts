@@ -25,8 +25,10 @@ export class ProfileComponent implements OnInit{
   ngOnInit(): void {
     this.route.params.subscribe(
       (params: Params) => {
+        this.questionService.getQuestions().subscribe(responseData => {
+          this.questions = responseData;
+        })
         this.profile = this.userService.getUser(params['id']);
-        this.questions = this.questionService.getQuestions();
         this.answers = this.questionService.getAnswers();
         this.sort = new SortData(this.questions,this.answers);
       }

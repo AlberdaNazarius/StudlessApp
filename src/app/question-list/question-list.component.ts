@@ -21,7 +21,7 @@ export class QuestionListComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.questionService.getQuestionss().subscribe(responseData => {
+    this.questionService.getQuestions().subscribe(responseData => {
       this.questions = responseData;
       this.currentPageData = this.questions.slice(indexes.startId, indexes.endId);
     })

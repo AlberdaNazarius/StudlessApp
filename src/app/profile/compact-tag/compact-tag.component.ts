@@ -20,8 +20,7 @@ export class CompactTagComponent {
 
   getTagsData(): void{
     this.pairs = [];
-    this.question = this.questionService.getQuestions();
-    // TODO fix this
+    // TODO fix this using endpoint for getting tags
     // this.question.forEach((q: Question) => {
     //   q.tags.forEach((eachTag: String) =>{
     //     const searchText = eachTag;

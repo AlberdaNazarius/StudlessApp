@@ -15,6 +15,8 @@ export class TopicPanelComponent implements OnInit {
   constructor(private questionService: QuestionService) { }
 
   ngOnInit(): void {
-    this.last_question = this.questionService.getQuestions()[0];
+    this.questionService.getQuestions().subscribe(responseData => {
+      this.last_question = responseData[0];
+    })
   }
 }
