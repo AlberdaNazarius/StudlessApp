@@ -9,8 +9,8 @@ import {User} from "../../shared/models/user.model";
 })
 export class QuestionComponent implements OnInit{
   @Input("questionInfo")
-  public question: Question;
-  protected author: User;
+  question: Question;
+  author: User;
 
   ngOnInit(): void {
     this.author = this.question.author;

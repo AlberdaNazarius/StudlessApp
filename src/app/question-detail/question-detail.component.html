@@ -6,17 +6,18 @@
           <h3 class="h3 d-inline-block fw-normal">{{question.questionName | sliceAndDots: 200}}</h3>
         </div>
         <div class="col col-lg-2 col-sm-2 col-3">
-          <button class="btn btn-primary d-inline-block p-2 text-nowrap">Ask Question</button>
+          <button class="btn btn-primary d-inline-block p-2 text-nowrap">Add Answer</button>
         </div>
       </div>
       <div class="row">
-        <h6 class="h6 link-secondary fw-normal">Added 2 month ago____Modified 2 years 7 month ago____Viewed 116 times</h6>
+        <h6 class="h6 link-secondary fw-normal">Viewed {{question.views}} times</h6>
       </div>
       <hr class="my-3">
       <app-detail-block [author]="question.author"
                         [description]="question.description"
                         [votes]="question.votes"
-                        [askedDate]="question.askedDate">
+                        [askedDate]="question.askedDate"
+                        [isQuestion]="true">
       </app-detail-block>
     </div>
     <div class="row">
@@ -25,7 +26,8 @@
                           [author]="answer.author"
                           [description]="answer.description"
                           [votes]="answer.votes"
-                          [askedDate]="answer.askedDate">
+                          [askedDate]="answer.answeredDate"
+                          [isQuestion]="false">
         </app-detail-block>
     </div>
   </div>

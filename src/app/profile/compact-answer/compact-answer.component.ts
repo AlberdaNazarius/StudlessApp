@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Answer } from 'src/app/shared/models/answer-model';
+import { Answer } from 'src/app/shared/models/answer.model';
 import { Question } from 'src/app/shared/models/question.model';
 import {QuestionService} from "src/app/shared/services/question.service";
 import { OnInit } from '@angular/core';
@@ -13,13 +13,15 @@ import { OnInit } from '@angular/core';
 })
 export class CompactAnswerComponent implements OnInit{
   @Input() answer: Answer;
-  @Input()question: Question[];
+  @Input() question: Question[];
 
   constructor(private questionService: QuestionService) {
 
    }
    ngOnInit(): void {
-    this.question = this.questionService.getQuestions();
+     this.questionService.getQuestions().subscribe(responseData => {
+       this.question = responseData;
+     })
    }
 
   getDescriptionSnippet(answer: string): string {
@@ -32,12 +34,12 @@ export class CompactAnswerComponent implements OnInit{
         return answer.substring(0, 60-((600-windowWidth)/6)) + '...';
       }
       else return answer.substring(0, 40) + '...';
-    
+
   }
   findQuestionByAnswer(id:number): number | null{
     for(const quest of this.question){
-      for(const answ of quest.answers){
-        if(answ.id == id)return quest.id;
+      for(const answer of quest.answers){
+        if(answer.id == id)return quest.id;
       }
     }
     return null;

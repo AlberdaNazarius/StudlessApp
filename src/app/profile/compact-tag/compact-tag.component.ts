@@ -20,23 +20,21 @@ export class CompactTagComponent {
 
   getTagsData(): void{
     this.pairs = [];
-    this.question = this.questionService.getQuestions();
-    this.question.forEach((q: Question) => {
-      q.tags.forEach((eachTag: String) =>{
-        const searchText = eachTag;
-        const foundPair = this.pairs.find((pair: TextNumberPair) => {
-        return pair.text === searchText;});
-
-      if (foundPair) {
-        foundPair.number1 += q.votes;
-        foundPair.number2 ++;
-      } else {
-        this.pairs.push({text: eachTag, number1:q.votes, number2: 1})
-      }
-      })
-    });
-
-    console.log(this.pairs);
+    // TODO fix this using endpoint for getting tags
+    // this.question.forEach((q: Question) => {
+    //   q.tags.forEach((eachTag: String) =>{
+    //     const searchText = eachTag;
+    //     const foundPair = this.pairs.find((pair: TextNumberPair) => {
+    //     return pair.text === searchText;});
+    //
+    //   if (foundPair) {
+    //     foundPair.number1 += q.votes;
+    //     foundPair.number2 ++;
+    //   } else {
+    //     this.pairs.push({text: eachTag, number1:q.votes, number2: 1})
+    //   }
+    //   })
+    // });
   }
 
 

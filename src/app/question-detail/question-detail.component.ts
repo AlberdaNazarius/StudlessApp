@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {QuestionService} from "../shared/services/question.service";
 import {Question} from "../shared/models/question.model";
-import {Answer} from "../shared/models/answer-model";
+import {Answer} from "../shared/models/answer.model";
 import {ActivatedRoute, Params} from "@angular/router";
 
 @Component({
@@ -20,10 +20,11 @@ export class QuestionDetailComponent implements OnInit{
   ngOnInit(): void {
     this.route.params.subscribe(
       (params: Params) => {
-        this.question = this.questionService.getQuestions()[params['id']];
-        this.answers = this.question.answers;
+        this.questionService.getQuestion(params['id']).subscribe(responseData => {
+          this.question = responseData
+          this.answers = this.question.answers;
+        });
       }
     );
-
   }
 }

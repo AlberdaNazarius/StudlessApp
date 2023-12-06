@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {Tag} from "../../../shared/models/tag.model";
 
 @Component({
   selector: 'app-tag',
@@ -6,6 +7,5 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./tag.component.scss']
 })
 export class TagComponent {
-  @Input()
-  public tag: string;
+  @Input() tag: Tag;
 }

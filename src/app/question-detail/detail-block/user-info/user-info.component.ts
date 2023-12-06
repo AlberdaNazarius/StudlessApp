@@ -8,5 +8,6 @@ import {User} from "../../../shared/models/user.model";
 })
 export class UserInfoComponent {
   @Input() user: User;
-  @Input() askedDate: string;
+  @Input() askedDate: Date;
+  @Input() isQuestion: boolean;
 }

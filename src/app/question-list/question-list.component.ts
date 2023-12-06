@@ -21,10 +21,12 @@ export class QuestionListComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.questions = this.questionService.getQuestions();
+    this.questionService.getQuestions().subscribe(responseData => {
+      this.questions = responseData;
+      this.currentPageData = this.questions.slice(indexes.startId, indexes.endId);
+    })
 
     const indexes = this.paginatorService.changePage(this.pageSize);
-    this.currentPageData = this.questions.slice(indexes.startId, indexes.endId);
     this.currentPageIndex = this.paginatorService.currentPage;
   }
 

@@ -23,7 +23,7 @@ import { SliceAndDotsPipe } from './shared/pipes/slice-and-dots.pipe';
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatTableModule } from "@angular/material/table";
 import { PaginatorComponent } from "./shared/components/paginator/paginator.component";
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { AuthInterceptorService } from './shared/services/auth-interceptor.service';
 import { AuthExpiredInterceptorService } from './shared/services/auth-expired-interceptor.service';
 import { SignUpComponent } from './sign-up/sign-up.component';
@@ -55,6 +55,7 @@ import { LoginComponent } from './auth/login/login.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     MatPaginatorModule,
     MatTableModule,
     FormsModule
