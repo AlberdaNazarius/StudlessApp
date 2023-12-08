@@ -1,17 +1,22 @@
 export class User {
-  constructor(public id: number,
+  constructor(
     public imagePath: string,
     public bannerPath: string,
     public name: string,
-    public status: string,
+    public email: string,
+    public password: string,
+    public role: string,
     public rating: number,
-    public messages: number,
-    public solutions: number,
-    public featuredContent: number,
-    public reactionsScore: number,
+    public messagesCount: number,
+    public solutionCount: number,
+    public featuredContentCount: number,
+    public reactionScoreCount: number,
     public points: number, 
     public joinDate: Date,
-    public onlineStatus: number
+    public onlineStatus: number,
+    public answersId: number[],
+    public questionsId: number[],
+    public id?: number
               
   ) {}
 }
