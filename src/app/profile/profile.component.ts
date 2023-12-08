@@ -20,15 +20,36 @@ export class ProfileComponent implements OnInit{
 
   constructor(private userService: UserService,
               private questionService: QuestionService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute) {
+                this.questions = [];
+               }
 
   ngOnInit(): void {
     this.route.params.subscribe(
       (params: Params) => {
-        this.questionService.getQuestions().subscribe(responseData => {
-          this.questions = responseData;
-        })
-        this.profile = this.userService.getUser(params['id']);
+        this.userService.getUser(params['id']).subscribe(
+          (user: User | null) => {
+            if (user !== null) {
+              this.profile = user;
+              
+            for (const number of this.profile.questionsId) {
+              this.route.params.subscribe(
+                (params: Params) => {
+                  this.questionService.getQuestion(number).subscribe(responseData => {
+                    this.questions.push(responseData)
+                  });
+                }
+              );
+            }
+            } else {
+              console.log("user not found");
+            }
+          }
+        );
+        
+        
+    
+          
         this.answers = this.questionService.getAnswers();
         this.sort = new SortData(this.questions,this.answers);
       }

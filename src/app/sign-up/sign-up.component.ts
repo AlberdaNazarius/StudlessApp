@@ -23,12 +23,14 @@ export class SignUpComponent {
 
     this.authService.signup(signUpForm.value.username, signUpForm.value.email, signUpForm.value.password).subscribe({
       next: (resData) => {
+        console.log("user successfully added")
         this.isLoading = false;
-        this.router.navigate(['/search']);
+        this.router.navigate(['/login']);
       },
       error: (errorMessage) => {
         this.isLoading = false;
         this.error = errorMessage;
+        this.router.navigate(['/login']);
       }
     });
   }

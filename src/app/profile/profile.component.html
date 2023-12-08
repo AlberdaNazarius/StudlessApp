@@ -5,25 +5,25 @@
         <img class="avatar position-absolute start-15 bottom-15 w-16 h-50" [src]="profile.imagePath" alt="Profile Avatar">
         <div class="profile-header text-center">
             <p class="name h2">{{profile.name}}</p>
-            <p class="status h5">{{profile.status}}</p>
+            <p class="status h5">{{profile.role}}</p>
         </div>
         <div class="general-profile-info ">
             <div class="profile-activity mt-4 d-flex justify-content-end">
                 <div class="items text-center">
                     <p class="default-text">Messages</p>
-                    <a href="#" class="activity-ref">{{profile.messages}}</a>
+                    <a href="#" class="activity-ref">{{profile.messagesCount}}</a>
                 </div>
                 <div class="items text-center">
                     <p class="default-text">Solutions</p>
-                    <p class="default-bold-text">{{profile.solutions}}</p>
+                    <p class="default-bold-text">{{profile.solutionCount}}</p>
                 </div>
                 <div class="items text-center">
                     <p class="default-text">Featured Content</p>
-                    <a href="#" class="activity-ref">{{profile.featuredContent}}</a>
+                    <a href="#" class="activity-ref">{{profile.featuredContentCount}}</a>
                 </div>
                 <div class="items text-center">
                     <p class="default-text">Reactions Score</p>
-                    <div class="default-bold-text">{{profile.reactionsScore}}</div>
+                    <div class="default-bold-text">{{profile.reactionScoreCount}}</div>
                 </div>
                 <div class="items text-center">
                     <p class="default-text">Points</p>

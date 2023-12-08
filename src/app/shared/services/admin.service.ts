@@ -5,7 +5,7 @@ import {of, Observable} from "rxjs";
 import { catchError, map } from 'rxjs/operators';
 
 @Injectable()
-export class UserService {
+export class AdminService {
   constructor(private http: HttpClient) {}
   private users: User[] = [
     /*
@@ -17,18 +17,10 @@ export class UserService {
   ]
   private user: User;
 
-  getUser(id: number): Observable<User | null> {
-    return this.http.get<any>(`http://localhost:5074/api/profile/${id}`).pipe(
-      map((data: any) => {
-        this.user = data;
-        return this.user;
-      }),
-      catchError((error) => {
-        console.error('Error getting user', error);
-        return of(null); 
-      })
-    );
+  admin() {
+    return this.http.get<User[]>(`http://localhost:5074/api/admin`)
   }
-
-
+  banUser(id: number){
+    return this.http.delete<any>(`http://localhost:5074/api/admin/user/ban/${id}`);
+  }
 }

@@ -2,6 +2,10 @@ import { Injectable } from '@angular/core';
 import { Subject, delay, of } from 'rxjs';
 import { Router } from '@angular/router';
 import { AuthDataHelper } from '../utils/auth-data-utils';
+import { User } from 'src/app/shared/models/user.model';
+import { HttpClient } from '@angular/common/http';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -23,15 +27,23 @@ export class AuthService {
     localStorage.setItem('token', this._authData);
   }
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private http: HttpClient) { }
 
   signup(username: string, email: string, password: string) {
-    // TODO: Remove this and implement http request for registration
+    const localUser = new User(
+      "assets/images/profile-logo.png","assets/images/profile-banner.png",username
+      ,email,password, "user",0,0,0,0,0,0,new Date,0,[],[]);
+      return this.http.put<any>(`http://localhost:5074/api/signup`, localUser);
+
+
+
+
+   /*  // TODO: Remove this and implement http request for registration
     let observable = of("valid_test_token").pipe(delay(2000));
     observable.subscribe(res => {
       this.authData = res;
     })
-    return observable;
+    return observable;*/
   }
 
   login(email: string, password: string) {
