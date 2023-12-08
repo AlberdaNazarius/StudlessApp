@@ -29,7 +29,6 @@ import { AuthExpiredInterceptorService } from './shared/services/auth-expired-in
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './auth/login/login.component';
-import { AdminComponent } from './admin/admin.component';
 import { AdminService } from './shared/services/admin.service';
 
 @NgModule({
@@ -53,8 +52,7 @@ import { AdminService } from './shared/services/admin.service';
     PaginatorComponent,
     SignUpComponent,
     LoginComponent,
-    AdminComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
